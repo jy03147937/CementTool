@@ -39,7 +39,6 @@
     self.plantsList.titleLabel.font = [UIFont fontWithName:@"helvetica" size:20];
     self.navigationController.navigationBarHidden = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.navBar. = UI
 }
 
 - (void)didReceiveMemoryWarning
