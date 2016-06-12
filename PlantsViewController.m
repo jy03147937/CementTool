@@ -11,6 +11,7 @@
 
 @interface PlantsViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scorllView;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 - (IBAction)back:(id)sender;
 
 
@@ -43,6 +44,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    CGFloat navHeight = 64.0f;
+    CGRect frame = CGRectMake(0.0f, 0.0f, 1024.0f, navHeight);
+    [_navBar setFrame:frame];
     
     //把数据从闪存提取出来
 }
@@ -121,6 +126,7 @@
         destViewController.averageSpecificHeatCost1 = [[self.tableData objectAtIndex:(indexPath.row)] objectForKey:@"averageSpecificHeatCost"];
         destViewController.averageSpecificPowerCost1 = [[self.tableData objectAtIndex:(indexPath.row)] objectForKey:@"averageSpecificPowerCost"];
         destViewController.averageSpecificPowerCostFromWHR1 = [[self.tableData objectAtIndex:(indexPath.row)] objectForKey:@"averageSpecificPowerCostFromWHR"];
+        destViewController.selectedCurrency = [[self.tableData objectAtIndex:(indexPath.row)] objectForKey:@"selectedCurrency"];
         
         destViewController.numberOfClinkerLines1 = [[self.tableData objectAtIndex:(indexPath.row)] objectForKey:@"numberOfClinkerLines"];
         destViewController.numberOfCementMills1 = [[self.tableData objectAtIndex:(indexPath.row)] objectForKey:@"numberOfCementMills"];

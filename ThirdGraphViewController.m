@@ -95,6 +95,7 @@ CGFloat const CPDBarInitialX_s3 = 0.93f;
         destViewController.achievableAnnualSavingsOnHeatConsumptionfromClinkerProduction = self.achievableAnnualSavingsOnHeatConsumptionfromClinkerProduction_s;
         destViewController.achievableAnnualSavingsOnHeatCostfromClinkerProduction = self.achievableAnnualSavingsOnHeatCostfromClinkerProduction_s;
         destViewController.name = self.name_s;
+        destViewController.selectedCurrency = self.selectedCurrency;
     }
 }
 
@@ -177,10 +178,10 @@ CGFloat const CPDBarInitialX_s3 = 0.93f;
     // 3 - Configure the x-axis
     axisSet.xAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
     if (self.actualClinkerSHC_s < self.achievableClinkerSHC_s) {
-    axisSet.xAxis.title = [[NSString alloc] initWithFormat:@"\nInt. Advanced:              %.1f  KJ/t.clinker\nAchievable Target:       %.1f  KJ/t.clinker\nActual:                           %.1f  KJ/t.clinker\nTarget Savings:            %@  Euro/a",self.intAdvancedClinkerSHC_s,(self.intAdvancedClinkerSHC_s+self.actualClinkerSHC_s)/2,self.actualClinkerSHC_s,[self numberTransfer:self.maximumAnnualSavingsOnHeatCostfromClinkerProduction_s/2]];
+    axisSet.xAxis.title = [[[NSString alloc] initWithFormat:@"\nInt. Advanced:              %.1f  KJ/t.clinker\nAchievable Target:       %.1f  KJ/t.clinker\nActual:                           %.1f  KJ/t.clinker\nTarget Savings:            %@  Currency/a",self.intAdvancedClinkerSHC_s,(self.intAdvancedClinkerSHC_s+self.actualClinkerSHC_s)/2,self.actualClinkerSHC_s,[self numberTransfer:self.maximumAnnualSavingsOnHeatCostfromClinkerProduction_s/2]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     }
     else{
-    axisSet.xAxis.title = [[NSString alloc] initWithFormat:@"\nInt. Advanced:              %.1f  KJ/t.clinker\nAchievable Target:       %.1f  KJ/t.clinker\nActual:                           %.1f  KJ/t.clinker\nTarget Savings:            %@  Euro/a",self.intAdvancedClinkerSHC_s,self.achievableClinkerSHC_s,self.actualClinkerSHC_s,[self numberTransfer:self.achievableAnnualSavingsOnHeatCostfromClinkerProduction_s]];
+    axisSet.xAxis.title = [[[NSString alloc] initWithFormat:@"\nInt. Advanced:              %.1f  KJ/t.clinker\nAchievable Target:       %.1f  KJ/t.clinker\nActual:                           %.1f  KJ/t.clinker\nTarget Savings:            %@  Currency/a",self.intAdvancedClinkerSHC_s,self.achievableClinkerSHC_s,self.actualClinkerSHC_s,[self numberTransfer:self.achievableAnnualSavingsOnHeatCostfromClinkerProduction_s]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     }
     axisSet.xAxis.titleTextStyle = axisTitleStyle;
     axisSet.xAxis.titleOffset = 20.0f;             //y坐标title的垂直坐标

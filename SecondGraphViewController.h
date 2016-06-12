@@ -21,6 +21,7 @@
     float achievableAnnualSavingsOnPowerConsumptionfromCementFinishGrinding;
     float achievableAnnualSavingsOnPowerCostfromCementFinishGrinding;
     NSString *name_s;
+    NSString * selectedCurrency;
 }
 @property float actualFGSPC_s2;
 @property float achievableFGSPC_s2;
@@ -30,5 +31,6 @@
 @property float achievableAnnualSavingsOnPowerConsumptionfromCementFinishGrinding;
 @property float achievableAnnualSavingsOnPowerCostfromCementFinishGrinding;
 @property NSString *name_s;
+@property NSString * selectedCurrency;
 
 @end

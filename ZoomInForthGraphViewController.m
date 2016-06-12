@@ -11,6 +11,7 @@
 @interface ZoomInForthGraphViewController ()
 @property (strong, nonatomic) IBOutlet CPTGraphHostingView *hostView;
 @property (nonatomic, strong) CPTBarPlot *WHR;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 
 -(void)initPlot;
 -(void)configureGraph;
@@ -38,7 +39,10 @@ CGFloat const CPDBarInitialX4 = 0.98f;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+    CGFloat navHeight = 64.0f;
+    CGRect frame = CGRectMake(0.0f, 0.0f, 1024.0f, navHeight);
+    [_navBar setFrame:frame];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -190,7 +194,7 @@ CGFloat const CPDBarInitialX4 = 0.98f;
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *) self.hostView.hostedGraph.axisSet;
     // 3 - Configure the x-axis
     axisSet.xAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
-    axisSet.xAxis.title = [[NSString alloc] initWithFormat:@"Achievable Target:       %.1f  kWh/t.clinker\nActual:                           %.1f  kWh/t.clinker\nTarget Savings:            %@  MWh/a\n                                       %@  Euro/a",self.achievableWHRClinkerSPG,self.actualWHRClinkerSPG,[self numberTransfer:self.achievableAnnualSavingsOnPowerConsumptionfromWHRPowerGeneration],[self numberTransfer:self.achievableAnnualSavingsOnPowerCostfromWHRPowerGeneration]];
+    axisSet.xAxis.title = [[[NSString alloc] initWithFormat:@"Achievable Target:       %.1f  kWh/t.clinker\nActual:                           %.1f  kWh/t.clinker\nTarget Savings:            %@  MWh/a\n                                       %@  Currency/a",self.achievableWHRClinkerSPG,self.actualWHRClinkerSPG,[self numberTransfer:self.achievableAnnualSavingsOnPowerConsumptionfromWHRPowerGeneration],[self numberTransfer:self.achievableAnnualSavingsOnPowerCostfromWHRPowerGeneration]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     axisSet.xAxis.titleTextStyle = axisTitleStyle;
     axisSet.xAxis.titleOffset = 25.0f;             //y坐标title的垂直坐标
     axisSet.xAxis.axisLineStyle = axisLineStyle;

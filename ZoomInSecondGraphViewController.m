@@ -14,6 +14,7 @@
 @property (nonatomic, strong) CPTBarPlot *FGSPC;
 
 @property (nonatomic, strong) CPTPlotSpaceAnnotation *priceAnnotation;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 - (IBAction)back:(id)sender;
 
 -(void)initPlot;
@@ -41,6 +42,10 @@ CGFloat const CPDBarInitialX2 = 0.98f;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    CGFloat navHeight = 64.0f;
+    CGRect frame = CGRectMake(0.0f, 0.0f, 1024.0f, navHeight);
+    [_navBar setFrame:frame];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -198,12 +203,12 @@ CGFloat const CPDBarInitialX2 = 0.98f;
     // 3 - Configure the x-axis
     axisSet.xAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
     if (self.actualFGSPC<self.achievableFGSPC) {
-        axisSet.xAxis.title = [[NSString alloc] initWithFormat:
-                               @"Int. Advanced:                        %.1f  KJ/t.clinker\nAchievable Target:                 %.1f  KJ/t.clinker\nActual:                                     %.1f  KJ/t.clinker\nMaximum Annual Savings:               %@  MWh/a\n                                                             %@  Euro/a\nTarget Savings:                                  %@  MWh/a\n                                                             %@  Euro/a",self.intAdvancedFGSPC,(self.intAdvancedFGSPC+self.actualFGSPC)/2,self.actualFGSPC,[self numberTransfer:self.maximumAnnualSavingsOnPowerConsumptionfromCementFinishGrinding],[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromCementFinishGrinding],[self numberTransfer:self.maximumAnnualSavingsOnPowerConsumptionfromCementFinishGrinding/2],[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromCementFinishGrinding/2]];
+        axisSet.xAxis.title = [[[NSString alloc] initWithFormat:
+                               @"Int. Advanced:                        %.1f  KJ/t.clinker\nAchievable Target:                 %.1f  KJ/t.clinker\nActual:                                     %.1f  KJ/t.clinker\nMaximum Annual Savings:               %@  MWh/a\n                                                             %@  Currency/a\nTarget Savings:                                  %@  MWh/a\n                                                             %@  Currency/a",self.intAdvancedFGSPC,(self.intAdvancedFGSPC+self.actualFGSPC)/2,self.actualFGSPC,[self numberTransfer:self.maximumAnnualSavingsOnPowerConsumptionfromCementFinishGrinding],[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromCementFinishGrinding],[self numberTransfer:self.maximumAnnualSavingsOnPowerConsumptionfromCementFinishGrinding/2],[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromCementFinishGrinding/2]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     }
     else{
-    axisSet.xAxis.title = [[NSString alloc] initWithFormat:
-        @"Int. Advanced:                        %.1f  KJ/t.clinker\nAchievable Target:                 %.1f  KJ/t.clinker\nActual:                                     %.1f  KJ/t.clinker\nMaximum Annual Savings:               %@  MWh/a\n                                                             %@  Euro/a\nTarget Savings:                                  %@  MWh/a\n                                                             %@  Euro/a",self.intAdvancedFGSPC,self.achievableFGSPC,self.actualFGSPC,[self numberTransfer:self.maximumAnnualSavingsOnPowerConsumptionfromCementFinishGrinding],[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromCementFinishGrinding],[self numberTransfer:self.achievableAnnualSavingsOnPowerConsumptionfromCementFinishGrinding],[self numberTransfer:self.achievableAnnualSavingsOnPowerCostfromCementFinishGrinding]];
+    axisSet.xAxis.title = [[[NSString alloc] initWithFormat:
+        @"Int. Advanced:                        %.1f  KJ/t.clinker\nAchievable Target:                 %.1f  KJ/t.clinker\nActual:                                     %.1f  KJ/t.clinker\nMaximum Annual Savings:               %@  MWh/a\n                                                             %@  Currency/a\nTarget Savings:                                  %@  MWh/a\n                                                             %@  Currency/a",self.intAdvancedFGSPC,self.achievableFGSPC,self.actualFGSPC,[self numberTransfer:self.maximumAnnualSavingsOnPowerConsumptionfromCementFinishGrinding],[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromCementFinishGrinding],[self numberTransfer:self.achievableAnnualSavingsOnPowerConsumptionfromCementFinishGrinding],[self numberTransfer:self.achievableAnnualSavingsOnPowerCostfromCementFinishGrinding]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     }
     axisSet.xAxis.titleTextStyle = axisTitleStyle;
     axisSet.xAxis.titleOffset = 25.0f;             //y坐标title的垂直坐标

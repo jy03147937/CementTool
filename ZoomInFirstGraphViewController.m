@@ -16,6 +16,7 @@
 @property (nonatomic, strong) CPTPlotSpaceAnnotation *priceAnnotation;
 
 - (IBAction)back:(id)sender;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 
 -(void)initPlot;
 -(void)configureGraph;
@@ -42,7 +43,11 @@ CGFloat const CPDBarInitialX1 = 0.98f;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];	
+    [super viewDidLoad];
+    
+    CGFloat navHeight = 64.0f;
+    CGRect frame = CGRectMake(0.0f, 0.0f, 1024.0f, navHeight);
+    [_navBar setFrame:frame];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -203,12 +208,12 @@ CGFloat const CPDBarInitialX1 = 0.98f;
     // 3 - Configure the x-axis
     axisSet.xAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
     if (self.actualSPC < self.achievableSPC) {
-        axisSet.xAxis.title = [[NSString alloc] initWithFormat:
-                               @"Int. Advanced:                        %.1f  kWh/t.clinker\nAchievable Target:                 %.1f  kWh/t.clinker\nActual:                                     %.1f  kWh/t.clinker\nMaximum Annual Savings:               %@  MWh/a\n                                                             %@  Euro/a\nTarget Savings:                                  %@  MWh/a\n                                                             %@  Euro/a",self.intAdvancedSPC,(self.intAdvancedSPC+self.actualSPC)/2,self.actualSPC,[self numberTransfer:self.maximumAnnualSavingsOnPowerConsumptionfromClinkerProduction],[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromClinkerProduction],[self numberTransfer:self.maximumAnnualSavingsOnPowerConsumptionfromClinkerProduction/2],[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromClinkerProduction/2]];
+        axisSet.xAxis.title = [[[NSString alloc] initWithFormat:
+                               @"Int. Advanced:                        %.1f  kWh/t.clinker\nAchievable Target:                 %.1f  kWh/t.clinker\nActual:                                     %.1f  kWh/t.clinker\nMaximum Annual Savings:               %@  MWh/a\n                                                             %@  Currency/a\nTarget Savings:                                  %@  MWh/a\n                                                             %@  Currency/a",self.intAdvancedSPC,(self.intAdvancedSPC+self.actualSPC)/2,self.actualSPC,[self numberTransfer:self.maximumAnnualSavingsOnPowerConsumptionfromClinkerProduction],[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromClinkerProduction],[self numberTransfer:self.maximumAnnualSavingsOnPowerConsumptionfromClinkerProduction/2],[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromClinkerProduction/2]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     }
     else{
-    axisSet.xAxis.title = [[NSString alloc] initWithFormat:
-                           @"Int. Advanced:                        %.1f  kWh/t.clinker\nAchievable Target:                 %.1f  kWh/t.clinker\nActual:                                     %.1f  kWh/t.clinker\nMaximum Annual Savings:               %@  MWh/a\n                                                             %@  Euro/a\nTarget Savings:                                  %@  MWh/a\n                                                             %@  Euro/a",self.intAdvancedSPC,self.achievableSPC,self.actualSPC,[self numberTransfer:self.maximumAnnualSavingsOnPowerConsumptionfromClinkerProduction],[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromClinkerProduction],[self numberTransfer:self.achievableAnnualSavingsOnPowerConsumptionfromClinkerProduction],[self numberTransfer:self.achievableAnnualSavingsOnPowerCostfromClinkerProduction]];
+    axisSet.xAxis.title = [[[NSString alloc] initWithFormat:
+                           @"Int. Advanced:                        %.1f  kWh/t.clinker\nAchievable Target:                 %.1f  kWh/t.clinker\nActual:                                     %.1f  kWh/t.clinker\nMaximum Annual Savings:               %@  MWh/a\n                                                             %@  Currency/a\nTarget Savings:                                  %@  MWh/a\n                                                             %@  Currency/a",self.intAdvancedSPC,self.achievableSPC,self.actualSPC,[self numberTransfer:self.maximumAnnualSavingsOnPowerConsumptionfromClinkerProduction],[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromClinkerProduction],[self numberTransfer:self.achievableAnnualSavingsOnPowerConsumptionfromClinkerProduction],[self numberTransfer:self.achievableAnnualSavingsOnPowerCostfromClinkerProduction]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     }
     axisSet.xAxis.titleTextStyle = axisTitleStyle;
     axisSet.xAxis.titleOffset = 25.0f;             //y坐标title的垂直坐标

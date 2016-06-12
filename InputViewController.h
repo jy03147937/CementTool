@@ -13,7 +13,7 @@
 
 
 
-@interface InputViewController : UIViewController<UIPopoverControllerDelegate,UIAlertViewDelegate>{
+@interface InputViewController : UIViewController<UIPopoverControllerDelegate,UIAlertViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource>{
     UIPopoverController *popoverController1;
     NSString *averageKiln1;
     NSString *plantName1;
@@ -31,6 +31,7 @@
     NSString *numberOfCementMills1;
     NSString *averageWHRNetPowerGeneration1;
     NSString *averageNumberOfPreheaterStages1;
+    NSString *selectedCurrency;
     NSNumber *rawGrindingProcess1;
     NSNumber *kilnGasBypass1;
     NSNumber *coolerType1;
@@ -39,6 +40,8 @@
     NSNumber *cementGrindingProcess1;
     
     NSMutableArray *tableData;
+    
+    NSArray *currencyOptions;
 }
 @property NSString *plantName1;
 @property NSString *totalPlantClinkerProductionLastYear1;
@@ -55,12 +58,15 @@
 @property NSString *numberOfCementMills1;
 @property NSString *averageWHRNetPowerGeneration1;
 @property NSString *averageNumberOfPreheaterStages1;
+@property NSString *selectedCurrency;
 @property NSNumber *rawGrindingProcess1;
 @property NSNumber *kilnGasBypass1;
 @property NSNumber *coolerType1;
 @property NSNumber *dryingRequirment1;
 @property NSNumber *burningProcess1;
 @property NSNumber *cementGrindingProcess1;
+
+@property NSArray *currencyOptions;
 
 @property (weak, nonatomic) IBOutlet UITextField *plantName;
 @property (weak, nonatomic) IBOutlet UITextField *totalPlantClinkerProductionLastYear;

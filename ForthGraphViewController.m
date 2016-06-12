@@ -83,7 +83,7 @@ CGFloat const CPDBarInitialX_s4 = 0.99f;
          destViewController.achievableAnnualSavingsOnPowerConsumptionfromWHRPowerGeneration = self.achievableAnnualSavingsOnPowerConsumptionfromWHRPowerGenerationv_s;
          destViewController.achievableAnnualSavingsOnPowerCostfromWHRPowerGeneration =self.achievableAnnualSavingsOnPowerCostfromWHRPowerGeneration_s;
          destViewController.name = self.name_s;
-         
+         destViewController.selectedCurrency = self.selectedCurrency;
      }
 }
 
@@ -163,7 +163,7 @@ CGFloat const CPDBarInitialX_s4 = 0.99f;
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *) self.hostView_s4.hostedGraph.axisSet;
     // 3 - Configure the x-axis
     axisSet.xAxis.labelingPolicy = CPTAxisLabelingPolicyNone; 
-    axisSet.xAxis.title = [[NSString alloc] initWithFormat:@"\nAchievable Target:       %.1f  kWh/t.clinker\nActual:                           %.1f  kWh/t.clinker\n\nTarget Savings:            %@  Euro/a",self.achievableWHRClinkerSPG_s,self.actualWHRClinkerSPG_s,[self numberTransfer:self.achievableAnnualSavingsOnPowerCostfromWHRPowerGeneration_s]];
+    axisSet.xAxis.title = [[[NSString alloc] initWithFormat:@"\nAchievable Target:       %.1f  kWh/t.clinker\nActual:                           %.1f  kWh/t.clinker\n\nTarget Savings:            %@  Currency/a",self.achievableWHRClinkerSPG_s,self.actualWHRClinkerSPG_s,[self numberTransfer:self.achievableAnnualSavingsOnPowerCostfromWHRPowerGeneration_s]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     axisSet.xAxis.titleTextStyle = axisTitleStyle;
     axisSet.xAxis.titleOffset = 20.0f;             //y坐标title的垂直坐标
     axisSet.xAxis.axisLineStyle = axisLineStyle;

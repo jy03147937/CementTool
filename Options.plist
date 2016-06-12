@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>USD(USA)</key>
+	<string>USD(USA)</string>
+	<key>EUR(Europe)</key>
+	<string>EUR(Europe)</string>
+	<key>KRW(Korean)</key>
+	<string>KRW(Korean)</string>
+	<key>CNY(China)</key>
+	<string>CNY(China)</string>
+	<key>INR(India)</key>
+	<string>INR(India)</string>
+	<key>TRY(Turkey)</key>
+	<string>TRY(Turkey)</string>
+	<key>IDR(Indonesia)</key>
+	<string>IDR(Indonesia)</string>
+	<key>PHP(Phillippines)</key>
+	<string>PHP(Phillippines)</string>
+</dict>
+</plist>

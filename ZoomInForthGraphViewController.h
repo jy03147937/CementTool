@@ -15,6 +15,7 @@
     float achievableWHRClinkerSPG;
     float achievableAnnualSavingsOnPowerCostfromWHRPowerGeneration;
     float achievableAnnualSavingsOnPowerConsumptionfromWHRPowerGeneration;
+    NSString * selectedCurrency;
 }
 
 @property float actualWHRClinkerSPG;
@@ -22,4 +23,6 @@
 @property float achievableAnnualSavingsOnPowerCostfromWHRPowerGeneration;
 @property float achievableAnnualSavingsOnPowerConsumptionfromWHRPowerGeneration;
 @property NSString * name;
+@property NSString * selectedCurrency;
+
 @end

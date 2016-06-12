@@ -14,8 +14,18 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 - (IBAction)showPopover1:(id)sender;
 - (IBAction)back:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *SELogo;
+
+@property (weak, nonatomic) IBOutlet UIButton *calculationButton;
+@property (weak, nonatomic) IBOutlet UIButton *save;
+
+@property (weak, nonatomic) IBOutlet UIButton *Save_Saved;
+@property (weak, nonatomic) IBOutlet UIButton *Calculate_Saved;
+@property (weak, nonatomic) IBOutlet UIButton *SaveAs_Saved;
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
+
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
 - (IBAction)save:(id)sender;
 - (void) saveData;
@@ -24,6 +34,8 @@
 - (BOOL) isNameExiting:(NSString*)name;
 - (IBAction)saveAs:(id)sender;
 
+-(void)setThePlaceHolder:(NSString *)str;
+
 @end
 
 @implementation InputViewController
@@ -31,6 +43,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    currencyOptions = [[NSArray alloc] initWithObjects:@"USD",@"CNY",@"KWR", nil];
+    
+    CGFloat navHeight = 64.0f;
+    CGRect frame = CGRectMake(0.0f, 0.0f, 1024.0f, navHeight);
+    [_navigationBar setFrame:frame];
+    
+    [_calculationButton.layer setCornerRadius:8.0];
+    [_save.layer setCornerRadius:8.0];
+    
     if (self.plantName1 != nil) {
         self.plantName.text = self.plantName1;
 
@@ -48,6 +70,18 @@
         self.averageSpecificHeatCost.text = self.averageSpecificHeatCost1;
         self.averageSpecificPowerCost.text = self.averageSpecificPowerCost1;
         self.averageSpecificPowerCostFromWHR.text = self.averageSpecificPowerCostFromWHR1;
+        for(int i = 0; i < [currencyOptions count]; i++) {
+            //NSLog(currencyOptions[i]);
+
+            if([self.selectedCurrency isEqualToString:[currencyOptions[i] description]]){
+                NSLog([self.selectedCurrency stringByAppendingString:[currencyOptions[i] description]]);
+
+                [self.pickerView selectRow:i inComponent:0 animated:false];
+                
+                [self setThePlaceHolder:[self.selectedCurrency stringByAppendingString:@"MWh"]];
+                break;
+            }
+        }
         
         self.numberOfCementMills.text = self.numberOfCementMills1;
         self.numberOfClinkerLines.text  = self.numberOfClinkerLines1;
@@ -59,6 +93,10 @@
         self.dryingRequirment.selectedSegmentIndex  = [self.dryingRequirment1 intValue];
         self.burningProcess.selectedSegmentIndex = [self.burningProcess1 intValue];
         self.cementGrindingProcess.selectedSegmentIndex = [self.cementGrindingProcess1 intValue];
+        
+        [_Save_Saved.layer setCornerRadius:8.0];
+        [_Calculate_Saved.layer setCornerRadius:8.0];
+        [_SaveAs_Saved.layer setCornerRadius:8.0];
     }
 }
 
@@ -114,6 +152,7 @@
         destViewController.calculator.averageSpecificHeatCost = [self.averageSpecificHeatCost.text floatValue];
         destViewController.calculator.averageSpecificPowerCost = [self.averageSpecificPowerCost.text floatValue];
         destViewController.calculator.averageSpecificPowerCostFromWHR = [self.averageSpecificPowerCostFromWHR.text floatValue];
+        destViewController.selectedCurrency = [currencyOptions[[self.pickerView selectedRowInComponent:0]] description];
         
         //plant configuration
         destViewController.calculator.numberOfClinkerLines = [self.numberOfClinkerLines.text intValue];
@@ -158,7 +197,9 @@
     [plant setObject:self.averageSpecificHeatCost.text forKey:@"averageSpecificHeatCost"];
     [plant setObject:self.averageSpecificPowerCost.text forKey:@"averageSpecificPowerCost"];
     [plant setObject:self.averageSpecificPowerCostFromWHR.text forKey:@"averageSpecificPowerCostFromWHR"];
-    
+    [plant setObject:currencyOptions[[self.pickerView selectedRowInComponent:0]] forKey:@"selectedCurrency"];
+
+                           
     [plant setObject:self.numberOfClinkerLines.text forKey:@"numberOfClinkerLines"];
     [plant setObject:self.numberOfCementMills.text forKey:@"numberOfCementMills"];
     [plant setObject:self.averageNumberOfPreheaterStages.text forKey:@"averageNumberOfPreheaterStages"];
@@ -287,5 +328,60 @@
 - (UITextField *)textFieldAtIndex:(NSInteger)textFieldIndex{
 }
 
+#pragma mark-the delegate method implementation for picker view
+//must have
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    
+    return 1;
+}
 
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return [currencyOptions count];
+}
+
+//optional
+/*
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    NSString *name = currencyOptions[row];
+    return name;
+}
+ */
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    NSString *str = [[currencyOptions[row] description] stringByAppendingString:@"/MWh"];
+    
+    [self setThePlaceHolder:str];
+    //self.averageSpecificHeatCost.placeholder = currencyOptions[row] + @"/MWh";
+    
+}
+
+-(CGFloat) pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{
+    CGFloat width = 60.0f;
+    return width;
+}
+
+-(CGFloat) pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
+    CGFloat height = 20.0f;
+    return height;
+}
+
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    UILabel *myView = nil;
+    myView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 75, 36)];
+    myView.font = [UIFont systemFontOfSize:14];
+    myView.text = currencyOptions[row];
+    myView.layer.borderWidth = 0;
+
+    if (self.plantName1 != nil) {
+
+    }
+    return myView;
+}
+
+#pragma : private method
+-(void)setThePlaceHolder:(NSString *)str{
+    self.averageSpecificHeatCost.placeholder = str;
+    self.averageSpecificPowerCost.placeholder = str;
+    self.averageSpecificPowerCostFromWHR.placeholder = str;
+}
 @end

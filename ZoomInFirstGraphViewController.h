@@ -20,6 +20,7 @@
     float achievableAnnualSavingsOnPowerConsumptionfromClinkerProduction;
     float achievableAnnualSavingsOnPowerCostfromClinkerProduction;
     NSString *name;
+    NSString * selectedCurrency;
 }
 
 @property float actualSPC;
@@ -31,4 +32,5 @@
 @property float achievableAnnualSavingsOnPowerConsumptionfromClinkerProduction;
 @property float achievableAnnualSavingsOnPowerCostfromClinkerProduction;
 @property NSString *name;
+@property NSString * selectedCurrency;
 @end

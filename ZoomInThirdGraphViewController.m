@@ -11,6 +11,7 @@
 @interface ZoomInThirdGraphViewController ()
 @property (strong, nonatomic) IBOutlet CPTGraphHostingView *hostView;
 @property (nonatomic, strong) CPTBarPlot *SHC;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 
 -(void)initPlot;
 -(void)configureGraph;
@@ -39,6 +40,10 @@ CGFloat const CPDBarInitialX3 = 0.98f;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    CGFloat navHeight = 64.0f;
+    CGRect frame = CGRectMake(0.0f, 0.0f, 1024.0f, navHeight);
+    [_navBar setFrame:frame];
 	
 }
 
@@ -194,12 +199,12 @@ CGFloat const CPDBarInitialX3 = 0.98f;
     // 3 - Configure the x-axis
     axisSet.xAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
     if (self.actualSHC < self.achievableSHC) {
-        axisSet.xAxis.title = [[NSString alloc] initWithFormat:
-                               @"Int. Advanced:                        %.1f  KJ/t.cement\nAchievable Target:                 %.1f  KJ/t.cement\nActual:                                     %.1f  KJ/t.cement\nMaximum Annual Savings:               %@  GJ/a\n                                                             %@  Euro/a\nTarget Savings:                                  %@  GJ/a\n                                                             %@  Euro/a",self.intAdvancedSHC,(self.intAdvancedSHC+self.actualSHC)/2,self.actualSHC,[self numberTransfer:self.maximumAnnualSavingsOnHeatConsumptionfromClinkerProduction],[self numberTransfer:self.maximumAnnualSavingsOnHeatCostfromClinkerProduction],[self numberTransfer:self.maximumAnnualSavingsOnHeatConsumptionfromClinkerProduction/2],[self numberTransfer:self.maximumAnnualSavingsOnHeatCostfromClinkerProduction/2]];
+        axisSet.xAxis.title = [[[NSString alloc] initWithFormat:
+                               @"Int. Advanced:                        %.1f  KJ/t.cement\nAchievable Target:                 %.1f  KJ/t.cement\nActual:                                     %.1f  KJ/t.cement\nMaximum Annual Savings:               %@  GJ/a\n                                                             %@  Currency/a\nTarget Savings:                                  %@  GJ/a\n                                                             %@  Currency/a",self.intAdvancedSHC,(self.intAdvancedSHC+self.actualSHC)/2,self.actualSHC,[self numberTransfer:self.maximumAnnualSavingsOnHeatConsumptionfromClinkerProduction],[self numberTransfer:self.maximumAnnualSavingsOnHeatCostfromClinkerProduction],[self numberTransfer:self.maximumAnnualSavingsOnHeatConsumptionfromClinkerProduction/2],[self numberTransfer:self.maximumAnnualSavingsOnHeatCostfromClinkerProduction/2]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     }
     else{
-    axisSet.xAxis.title = [[NSString alloc] initWithFormat:
-                           @"Int. Advanced:                        %.1f  KJ/t.cement\nAchievable Target:                 %.1f  KJ/t.cement\nActual:                                     %.1f  KJ/t.cement\nMaximum Annual Savings:               %@  GJ/a\n                                                             %@  Euro/a\nTarget Savings:                                  %@  GJ/a\n                                                             %@  Euro/a",self.intAdvancedSHC,self.achievableSHC,self.actualSHC,[self numberTransfer:self.maximumAnnualSavingsOnHeatConsumptionfromClinkerProduction],[self numberTransfer:self.maximumAnnualSavingsOnHeatCostfromClinkerProduction],[self numberTransfer:self.achievableAnnualSavingsOnHeatConsumptionfromClinkerProduction],[self numberTransfer:self.achievableAnnualSavingsOnHeatCostfromClinkerProduction]];
+    axisSet.xAxis.title = [[[NSString alloc] initWithFormat:
+                           @"Int. Advanced:                        %.1f  KJ/t.cement\nAchievable Target:                 %.1f  KJ/t.cement\nActual:                                     %.1f  KJ/t.cement\nMaximum Annual Savings:               %@  GJ/a\n                                                             %@  Currency/a\nTarget Savings:                                  %@  GJ/a\n                                                             %@  Currency/a",self.intAdvancedSHC,self.achievableSHC,self.actualSHC,[self numberTransfer:self.maximumAnnualSavingsOnHeatConsumptionfromClinkerProduction],[self numberTransfer:self.maximumAnnualSavingsOnHeatCostfromClinkerProduction],[self numberTransfer:self.achievableAnnualSavingsOnHeatConsumptionfromClinkerProduction],[self numberTransfer:self.achievableAnnualSavingsOnHeatCostfromClinkerProduction]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     }
     axisSet.xAxis.titleTextStyle = axisTitleStyle;
     axisSet.xAxis.titleOffset = 25.0f;             //y坐标title的垂直坐标

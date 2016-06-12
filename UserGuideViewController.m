@@ -10,6 +10,7 @@
 
 @interface UserGuideViewController ()
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 
 - (IBAction)back:(id)sender;
 
@@ -29,7 +30,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    CGFloat navHeight = 64.0f;
+    CGRect frame = CGRectMake(0.0f, 0.0f, 1024.0f, navHeight);
+    [_navBar setFrame:frame];
 }
 
 - (void)viewWillAppear:(BOOL)animated

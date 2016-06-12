@@ -11,10 +11,10 @@
 
 @interface FourGraphViewController : UIViewController{
     Calculator *calculator;
-
+    NSString *selectedCurrency;
 }
 
 @property Calculator *calculator;
-
+@property NSString *selectedCurrency;
 
 @end

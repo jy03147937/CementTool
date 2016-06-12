@@ -8,16 +8,17 @@
         <!--Navigation View Controller-->
         <scene sceneID="t4p-I4-B3t">
             <objects>
-                <viewController id="qVr-P3-oZ0" customClass="NavigationViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleAspectFill" id="RvV-dr-BEF">
+                <viewController hidesBottomBarWhenPushed="YES" id="qVr-P3-oZ0" customClass="NavigationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RvV-dr-BEF">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JZe-qO-ecH">
-                                <rect key="frame" x="367" y="312" width="288" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JZe-qO-ecH">
+                                <rect key="frame" x="367" y="328" width="288" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Input">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -25,38 +26,12 @@
                                     <segue destination="2" kind="modal" identifier="input" id="AUK-na-7fS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jGU-YF-UnB">
-                                <rect key="frame" x="367" y="463" width="288" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Result">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="rUb-BS-lGt" kind="modal" identifier="result" id="slS-Ow-fer"/>
-                                </connections>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" id="Jbb-5o-gJi">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.11649050799025458" green="0.85849808673469385" blue="0.22940426912772041" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Plant Level Asessment Tool" id="0VC-sg-Mdg"/>
-                                </items>
-                            </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="CementResult.png" id="l2V-De-biI">
-                                <rect key="frame" x="11" y="702" width="72" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GGK-gH-NUD">
-                                <rect key="frame" x="367" y="611" width="288" height="55"/>
+                                <rect key="frame" x="367" y="590" width="288" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Saved Data">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -65,10 +40,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="glf-JA-Kwo">
-                                <rect key="frame" x="368" y="165" width="288" height="55"/>
+                                <rect key="frame" x="368" y="200" width="288" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="User Guide">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -76,15 +52,52 @@
                                     <segue destination="oc1-na-zbj" kind="modal" id="Q9f-aD-taT"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" id="KTs-G5-df4">
-                                <rect key="frame" x="940" y="12" width="77" height="29"/>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="Jbb-5o-gJi">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.11649050799025458" green="0.85849808673469385" blue="0.22940426912772041" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Plant Level Asessment Tool" id="0VC-sg-Mdg"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" highlightedImage="SE_Logo.png" id="KTs-G5-df4">
+                                <rect key="frame" x="939" y="28" width="77" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jGU-YF-UnB">
+                                <rect key="frame" x="367" y="460" width="288" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Result">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rUb-BS-lGt" kind="modal" identifier="result" id="slS-Ow-fer"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="CementResult.png" id="l2V-De-biI">
+                                <rect key="frame" x="20" y="714" width="72" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.69002544437241942" blue="0.69112256276048023" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.98486539230000003" blue="0.86100612300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="Taj-LF-p6S"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="input" destination="JZe-qO-ecH" id="XUh-uC-cNR"/>
                         <outlet property="navBar" destination="Jbb-5o-gJi" id="dKP-L6-1NA"/>
@@ -95,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sR-fz-cAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4141" y="-5210"/>
+            <point key="canvasLocation" x="1738" y="-5268"/>
         </scene>
         <!--Plants View Controller-->
         <scene sceneID="puX-wY-m71">
@@ -105,25 +118,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" id="mB8-up-eAz">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem title="Plants Info" id="haL-y2-ns9">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="pIN-iE-v49">
-                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="back:" destination="nzS-7g-RD6" id="mwN-iZ-ke2"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hHH-MI-j8J">
-                                <rect key="frame" x="0.0" y="44" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="64" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="item" id="Wqb-mV-3Lw">
                                         <rect key="frame" x="0.0" y="22" width="1024" height="44"/>
@@ -131,8 +130,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wqb-mV-3Lw" id="fc2-tM-iXx">
                                             <rect key="frame" x="0.0" y="0.0" width="810" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.98486539230000003" blue="0.86100612300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="3t6-ve-U8v" kind="modal" identifier="plantDetail" id="xQ5-Py-nJV"/>
                                         </connections>
@@ -143,12 +143,28 @@
                                     <outlet property="delegate" destination="nzS-7g-RD6" id="yJ3-2b-eom"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="mB8-up-eAz">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Plants Info" id="haL-y2-ns9">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="pIN-iE-v49">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="back:" destination="nzS-7g-RD6" id="mwN-iZ-ke2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="eSi-7v-i4O"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="navBar" destination="mB8-up-eAz" id="If6-s0-o0b"/>
                         <outlet property="scorllView" destination="3XA-AJ-ACZ" id="osg-w6-5dB"/>
                         <outlet property="tableView" destination="hHH-MI-j8J" id="4gY-G1-Wxz"/>
                     </connections>
@@ -169,22 +185,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="4220"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <navigationBar contentMode="scaleToFill" id="wge-fL-tfC">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
-                                        <items>
-                                            <navigationItem title="User guide" id="4cs-Ku-ao7">
-                                                <barButtonItem key="leftBarButtonItem" title="Back" id="q1k-dq-0Fc">
-                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <connections>
-                                                        <action selector="back:" destination="oc1-na-zbj" id="u6x-d4-7w0"/>
-                                                    </connections>
-                                                </barButtonItem>
-                                            </navigationItem>
-                                        </items>
-                                    </navigationBar>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="main menu.png" id="vBV-oU-1TT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="MainMenu.png" id="vBV-oU-1TT">
                                         <rect key="frame" x="96" y="164" width="446" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -192,7 +193,7 @@
                                         <rect key="frame" x="96" y="98" width="202" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </label>
@@ -203,64 +204,61 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Main menu is the first interface when you open the app.     " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="isg-rn-Mbr">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Main menu is the first page when you open the app.     " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="isg-rn-Mbr">
                                         <rect key="frame" x="580" y="179" width="325" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="There are four options in the main menu." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E7t-vC-hFS">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="There are four options:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E7t-vC-hFS">
                                         <rect key="frame" x="580" y="245" width="308" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Input——This option will lead you to the input interface" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MqA-i1-LDy">
-                                        <rect key="frame" x="580" y="321" width="339" height="30"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1.User guide——The present page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QG8-Py-u4d">
+                                        <rect key="frame" x="585" y="280" width="319" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.10188775735012467" green="0.023318009553992325" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="User guide——The present page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QG8-Py-u4d">
-                                        <rect key="frame" x="580" y="279" width="319" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                        <color key="textColor" red="0.10188775735012467" green="0.023318009553992325" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Result——This will show how the results gragh show" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LlN-IB-hxY">
-                                        <rect key="frame" x="580" y="358" width="329" height="30"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2.Input——This option will lead you to the input interface" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MqA-i1-LDy">
+                                        <rect key="frame" x="585" y="320" width="339" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.10188775735012467" green="0.023318009553992325" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saved data——This option will lead you to the plant data you have saved" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g7y-MJ-jDY">
-                                        <rect key="frame" x="580" y="387" width="351" height="62"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3.Result——This will show how the results gragh show" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LlN-IB-hxY">
+                                        <rect key="frame" x="585" y="357" width="329" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.10188775735012467" green="0.023318009553992325" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="4.Saved data——This option will lead you to the plant data you have saved" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g7y-MJ-jDY">
+                                        <rect key="frame" x="585" y="385" width="351" height="62"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Input interface" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SRc-1r-rkN">
                                         <rect key="frame" x="96" y="552" width="245" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="input.png" id="vru-51-1QG">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Input1.png" id="vru-51-1QG">
                                         <rect key="frame" x="96" y="615" width="446" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="finish input.png" id="G4w-Cs-T5g">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Input2.png" id="G4w-Cs-T5g">
                                         <rect key="frame" x="96" y="960" width="446" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Click 'Input' in the main menu,you will see this interface." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sBb-7G-WjB">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Click 'Input' in the main menu." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sBb-7G-WjB">
                                         <rect key="frame" x="580" y="666" width="339" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -293,14 +291,14 @@
                                         <rect key="frame" x="96" y="1334" width="128" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Result.png" id="AUx-mf-uD0">
                                         <rect key="frame" x="96" y="1390" width="446" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Big View Result.png" id="MzV-Nw-vHI">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Result2.png" id="MzV-Nw-vHI">
                                         <rect key="frame" x="96" y="1729" width="446" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -322,30 +320,30 @@
                                         <rect key="frame" x="96" y="2090" width="214" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Saved data.png" id="icv-BT-6cL">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SavedData.png" id="icv-BT-6cL">
                                         <rect key="frame" x="96" y="2145" width="446" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="delete.png" id="fxj-95-8qD">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SavedData2.png" id="fxj-95-8qD">
                                         <rect key="frame" x="96" y="2491" width="446" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="detail-bottom.png" id="jAf-IY-FMt">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SavedData4.png" id="jAf-IY-FMt">
                                         <rect key="frame" x="96" y="3179" width="446" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Save as.png" id="Fl2-vb-SfK">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SavedData5.png" id="Fl2-vb-SfK">
                                         <rect key="frame" x="96" y="3518" width="446" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="detail.png" id="y0v-bq-7Mq">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SavedData3.png" highlightedImage="SavedData3.png" id="y0v-bq-7Mq">
                                         <rect key="frame" x="96" y="2840" width="446" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Click 'Saved data' in the main menu, you will see the saved data list." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NtG-9g-hS7">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Click 'Saved data' in the main menu,you will see the saved data list." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NtG-9g-hS7">
                                         <rect key="frame" x="597" y="2231" width="302" height="71"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -366,14 +364,14 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="If you update the data,you can  save the data directly by pressing the button 'Save'.      " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gbr-3e-Dwp">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="If you update the data,you can save the data directly by pressing the button 'Save'.      " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gbr-3e-Dwp">
                                         <rect key="frame" x="597" y="3249" width="312" height="99"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Or you can press the button 'Save as'. It is worth noticing that you must input a  name different from the present name.  " lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="egx-iX-YPr">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Or you can press the button 'Save as'. It is worth noticing that you must input a name different from the current name.  " lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="egx-iX-YPr">
                                         <rect key="frame" x="597" y="3605" width="291" height="83"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -382,17 +380,37 @@
                                     </label>
                                 </subviews>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="wge-fL-tfC">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="User guide" id="4cs-Ku-ao7">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="q1k-dq-0Fc">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="back:" destination="oc1-na-zbj" id="u6x-d4-7w0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" highlightedImage="SE_Logo.png" id="xab-ef-4B0">
+                                <rect key="frame" x="939" y="28" width="77" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.67484130792906405" green="0.96955865538364461" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="navBar" destination="wge-fL-tfC" id="cfy-py-gUA"/>
                         <outlet property="scrollView" destination="alR-Aq-n1S" id="gkL-Vv-ojy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89F-nc-s2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3011" y="-5644"/>
+            <point key="canvasLocation" x="3849" y="-5644"/>
         </scene>
         <!--Input View Controller-->
         <scene sceneID="4">
@@ -403,15 +421,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="t0R-wC-kcN">
-                                <rect key="frame" x="-20" y="-20" width="1064" height="1412"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1064" height="1412"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plant General Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BEx-4K-7Pv">
-                                        <rect key="frame" x="77" y="72" width="245" height="75"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Average Cement Mill Design Output ：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PJE-yH-HZB">
                                         <rect key="frame" x="96" y="571" width="293" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -421,7 +433,7 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plant Production" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nhn-Ss-pIX">
                                         <rect key="frame" x="79" y="175" width="194" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="kWh/ t clinker" minimumFontSize="17" id="PHR-oW-3bl">
@@ -484,8 +496,10 @@
                                         </segments>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZuC-CJ-8Km">
-                                        <rect key="frame" x="669" y="1344" width="125" height="44"/>
+                                        <rect key="frame" x="709" y="1355" width="110" height="38"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Calculate">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -543,7 +557,7 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plant Configuration Inputs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p7I-2q-d50">
                                         <rect key="frame" x="77" y="790" width="264" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number of Cement Mills ：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hNE-HE-Noz">
@@ -555,7 +569,7 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plant Major KPIs: Specific Power Consumptions &amp; Generation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Ij-dv-8ga">
                                         <rect key="frame" x="79" y="294" width="607" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="t cement/a" minimumFontSize="17" id="tIP-Vm-G3F">
@@ -566,7 +580,7 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plant Capacity Inputs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8PR-db-0sy">
                                         <rect key="frame" x="79" y="492" width="235" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="t cement/hour" minimumFontSize="17" id="i8r-Wh-FHf">
@@ -634,20 +648,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <navigationBar contentMode="scaleToFill" id="Qnf-UQ-hCk">
-                                        <rect key="frame" x="20" y="20" width="1024" height="44"/>
-                                        <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
-                                        <items>
-                                            <navigationItem title="Input" id="Dkc-oy-hAX">
-                                                <barButtonItem key="leftBarButtonItem" title="Back" id="RqL-Cz-EoF">
-                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <connections>
-                                                        <action selector="back:" destination="2" id="Lz7-eE-knL"/>
-                                                    </connections>
-                                                </barButtonItem>
-                                            </navigationItem>
-                                        </items>
-                                    </navigationBar>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Average Number of Preheater Stages :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z6H-DI-Lg5">
                                         <rect key="frame" x="96" y="950" width="294" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -683,7 +683,7 @@
                                         <rect key="frame" x="77" y="615" width="212" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Average Specific Heat Cost :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zue-Bc-OFl">
@@ -751,14 +751,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" id="KiB-vR-QdR">
-                                        <rect key="frame" x="945" y="25" width="90" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ieW-dc-s1f">
-                                        <rect key="frame" x="265" y="1344" width="125" height="44"/>
+                                        <rect key="frame" x="225" y="1355" width="110" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Save">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -766,9 +764,45 @@
                                             <action selector="save:" destination="2" eventType="touchUpInside" id="oT4-2n-wXo"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plant General Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BEx-4K-7Pv">
+                                        <rect key="frame" x="77" y="72" width="245" height="75"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" id="Pqa-1h-bpc">
+                                        <rect key="frame" x="312" y="593" width="140" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="2" id="ggZ-zp-ABU"/>
+                                            <outlet property="delegate" destination="2" id="PKK-B3-oJy"/>
+                                        </connections>
+                                    </pickerView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.98486539230000003" blue="0.86100612300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="Qnf-UQ-hCk">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Input" id="Dkc-oy-hAX">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="RqL-Cz-EoF">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="back:" destination="2" id="Lz7-eE-knL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" highlightedImage="SE_Logo.png" id="KiB-vR-QdR">
+                                <rect key="frame" x="939" y="28" width="77" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -776,6 +810,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="SELogo" destination="KiB-vR-QdR" id="dcv-pA-Gbm"/>
                         <outlet property="averageClinkerLineCapacity" destination="ed5-Vs-cFd" id="oVE-fZ-fSz"/>
                         <outlet property="averageNumberOfPreheaterStages" destination="IUI-Sy-dyF" id="RpC-Yh-ncR"/>
                         <outlet property="averageSpecificHeatCost" destination="lWu-cg-hHA" id="4Rk-fx-xvV"/>
@@ -783,6 +818,7 @@
                         <outlet property="averageSpecificPowerCostFromWHR" destination="vgm-58-5dZ" id="qyD-7R-xnv"/>
                         <outlet property="averageWHRNetPowerGeneration" destination="jsv-Cu-S1B" id="yXg-fa-WIm"/>
                         <outlet property="burningProcess" destination="H6S-P5-BNf" id="hEB-0m-8QS"/>
+                        <outlet property="calculationButton" destination="ZuC-CJ-8Km" id="Zli-Jp-q3Z"/>
                         <outlet property="cementGrindingProcess" destination="ku2-rY-v2Q" id="AZy-ds-Frr"/>
                         <outlet property="coolerType" destination="wan-2c-pW7" id="ql0-16-cO9"/>
                         <outlet property="dryingRequirment" destination="5pb-Dz-n9O" id="KLe-bR-dDY"/>
@@ -790,11 +826,13 @@
                         <outlet property="navigationBar" destination="Qnf-UQ-hCk" id="dqR-Rp-3a2"/>
                         <outlet property="numberOfCementMills" destination="JsJ-bV-HDe" id="ymn-Ed-l5z"/>
                         <outlet property="numberOfClinkerLines" destination="oii-Sh-O8g" id="i5L-YK-Lei"/>
+                        <outlet property="pickerView" destination="Pqa-1h-bpc" id="eJ4-AP-ChR"/>
                         <outlet property="plantCementFGSPC" destination="mMe-R5-Hjd" id="fn5-ij-eXx"/>
                         <outlet property="plantClinkerSHC" destination="eOV-s3-USw" id="tyb-HR-f95"/>
                         <outlet property="plantClinkerSPC" destination="PHR-oW-3bl" id="fkd-vo-uSc"/>
                         <outlet property="plantName" destination="ux3-Qn-2FG" id="vRp-Il-MaP"/>
                         <outlet property="rawGrindingProcess" destination="oYS-dL-ViE" id="GU4-0U-Bdt"/>
+                        <outlet property="save" destination="ieW-dc-s1f" id="ocG-5k-Jo4"/>
                         <outlet property="scrollView" destination="t0R-wC-kcN" id="Zjm-hX-Hea"/>
                         <outlet property="totalPlantCementMillOutput" destination="i8r-Wh-FHf" id="3Zh-1J-0Bf"/>
                         <outlet property="totalPlantCementProductionLastYear" destination="tIP-Vm-G3F" id="Tyb-37-co9"/>
@@ -803,7 +841,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1779" y="-5082"/>
+            <point key="canvasLocation" x="3933" y="-4797"/>
         </scene>
         <!--Popover Content View Controller-->
         <scene sceneID="OKb-Tu-cT7">
@@ -918,7 +956,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUj-oq-9Fp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-59" y="-6827"/>
+            <point key="canvasLocation" x="921" y="-6827"/>
         </scene>
         <!--ZoomInFirstGraph View Controller - Output-->
         <scene sceneID="Hx6-fz-fPQ">
@@ -929,18 +967,19 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="l0W-Af-PO0" customClass="CPTGraphHostingView">
-                                <rect key="frame" x="0.0" y="44" width="1024" height="748"/>
+                                <rect key="frame" x="0.0" y="64" width="1024" height="728"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" id="GDh-zM-cRF">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="GDh-zM-cRF">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Results" id="C5L-fL-TQ1">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="ybn-QU-ZSl">
-                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="back:" destination="noI-OK-rsN" id="mlb-Ym-YPK"/>
                                             </connections>
@@ -948,8 +987,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" id="EDK-Mj-GPp">
-                                <rect key="frame" x="925" y="5" width="90" height="34"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" highlightedImage="SE_Logo.png" id="o4Z-RJ-V50">
+                                <rect key="frame" x="939" y="28" width="77" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -959,11 +998,12 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="hostView" destination="l0W-Af-PO0" id="EoN-qp-i4A"/>
+                        <outlet property="navBar" destination="GDh-zM-cRF" id="IaV-Qc-Sjr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TSt-aF-qek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2396" y="-5184"/>
+            <point key="canvasLocation" x="8276" y="-5184"/>
         </scene>
         <!--Zoom In Second Graph View Controller-->
         <scene sceneID="zxh-u5-PyO">
@@ -974,18 +1014,18 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="2av-yx-u7e" customClass="CPTGraphHostingView">
-                                <rect key="frame" x="0.0" y="44" width="1024" height="740"/>
+                                <rect key="frame" x="0.0" y="64" width="1024" height="720"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" id="Imm-bb-j3g">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="Imm-bb-j3g">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Results" id="iTK-cq-OdT">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="y65-vc-MDx">
-                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="back:" destination="Z9k-m4-82V" id="bJg-tE-rRs"/>
                                             </connections>
@@ -994,7 +1034,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" id="dBP-Ba-pHQ">
-                                <rect key="frame" x="925" y="5" width="90" height="34"/>
+                                <rect key="frame" x="939" y="28" width="77" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -1003,6 +1043,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="hostView" destination="2av-yx-u7e" id="Ocm-YR-saC"/>
+                        <outlet property="navBar" destination="Imm-bb-j3g" id="kbM-Ke-WAE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cje-i1-PM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1018,18 +1059,18 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="Qgv-js-cYg" customClass="CPTGraphHostingView">
-                                <rect key="frame" x="0.0" y="44" width="1024" height="740"/>
+                                <rect key="frame" x="0.0" y="64" width="1024" height="720"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" id="r5c-FU-eKQ">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="r5c-FU-eKQ">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Results" id="k9f-VF-ngb">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Fm7-Jv-IbA">
-                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="back:" destination="hv7-eB-d1S" id="aMC-gX-Ejf"/>
                                             </connections>
@@ -1038,7 +1079,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" id="pVM-gd-hcO">
-                                <rect key="frame" x="925" y="5" width="90" height="34"/>
+                                <rect key="frame" x="939" y="28" width="77" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -1047,6 +1088,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="hostView" destination="Qgv-js-cYg" id="qNW-1y-Fcq"/>
+                        <outlet property="navBar" destination="r5c-FU-eKQ" id="Vig-T3-OHW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rhe-s4-taF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1062,18 +1104,18 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="i3l-FB-b4q" customClass="CPTGraphHostingView">
-                                <rect key="frame" x="0.0" y="44" width="1024" height="740"/>
+                                <rect key="frame" x="0.0" y="64" width="1024" height="720"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" id="fym-Ki-KgJ">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="fym-Ki-KgJ">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Results" id="Ajd-NG-Ohl">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Zo6-v4-jpC">
-                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="back:" destination="P6b-Bf-cAx" id="xJs-vM-Hji"/>
                                             </connections>
@@ -1082,7 +1124,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" id="uVJ-ty-vrt">
-                                <rect key="frame" x="925" y="5" width="90" height="34"/>
+                                <rect key="frame" x="939" y="29" width="77" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -1091,6 +1133,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="hostView" destination="i3l-FB-b4q" id="Dkr-Gf-keb"/>
+                        <outlet property="navBar" destination="fym-Ki-KgJ" id="taO-MH-Hx9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXg-mq-aVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1110,7 +1153,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <containerView contentMode="scaleToFill" id="bbJ-xW-2ea">
-                                        <rect key="frame" x="0.0" y="374" width="512" height="330"/>
+                                        <rect key="frame" x="0.0" y="394" width="512" height="330"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <connections>
@@ -1118,7 +1161,7 @@
                                         </connections>
                                     </containerView>
                                     <containerView contentMode="scaleToFill" id="cDq-x0-kGv">
-                                        <rect key="frame" x="0.0" y="44" width="512" height="330"/>
+                                        <rect key="frame" x="0.0" y="64" width="512" height="330"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <connections>
@@ -1126,7 +1169,7 @@
                                         </connections>
                                     </containerView>
                                     <containerView contentMode="scaleToFill" id="7gK-Fn-fio">
-                                        <rect key="frame" x="512" y="44" width="512" height="330"/>
+                                        <rect key="frame" x="512" y="64" width="512" height="330"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <connections>
@@ -1134,21 +1177,22 @@
                                         </connections>
                                     </containerView>
                                     <containerView contentMode="scaleToFill" id="288-0H-Mv2">
-                                        <rect key="frame" x="512" y="374" width="512" height="330"/>
+                                        <rect key="frame" x="512" y="394" width="512" height="330"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="Kis-ra-nPL" kind="embed" identifier="forth" id="XNT-yQ-4VZ"/>
                                         </connections>
                                     </containerView>
-                                    <navigationBar contentMode="scaleToFill" id="bJz-Lw-sqm">
+                                    <navigationBar contentMode="scaleToFill" translucent="NO" id="bJz-Lw-sqm">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
                                         <items>
                                             <navigationItem title="Results" id="TSI-WV-3yH">
                                                 <barButtonItem key="leftBarButtonItem" title="Back" id="rjI-AZ-0CP">
-                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="Back:" destination="rUb-BS-lGt" id="77o-bs-md3"/>
                                                     </connections>
@@ -1157,7 +1201,7 @@
                                         </items>
                                     </navigationBar>
                                     <navigationBar contentMode="scaleToFill" id="5kc-Eg-U4N">
-                                        <rect key="frame" x="0.0" y="704" width="1024" height="44"/>
+                                        <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
                                         <items>
@@ -1165,11 +1209,11 @@
                                         </items>
                                     </navigationBar>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" id="9RP-L3-GMH">
-                                        <rect key="frame" x="925" y="5" width="90" height="34"/>
+                                        <rect key="frame" x="939" y="28" width="77" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" id="5fZ-O4-cUl">
-                                        <rect key="frame" x="153" y="715" width="719" height="21"/>
+                                        <rect key="frame" x="153" y="735" width="719" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1184,6 +1228,7 @@
                     <connections>
                         <outlet property="cumulatedAchievableAnnualCostSaving" destination="b5b-tx-9Cd" id="423-zI-1Vl"/>
                         <outlet property="cumulatedLabel" destination="5fZ-O4-cUl" id="YY5-a4-03o"/>
+                        <outlet property="navBar" destination="bJz-Lw-sqm" id="ZTo-mo-Y87"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRI-oL-ZRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1359,14 +1404,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" highlightedImage="SE_Logo.png" id="joI-c7-5lh">
+                                <rect key="frame" x="939" y="28" width="77" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Dsh-dj-O25">
-                                <rect key="frame" x="-20" y="-20" width="1064" height="1412"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1064" height="1412"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plant General Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fXe-5G-fSe">
                                         <rect key="frame" x="77" y="72" width="245" height="75"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Average Cement Mill Design Output ：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fge-uH-Uju">
@@ -1378,7 +1427,7 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plant Production" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zpK-9x-oBr">
                                         <rect key="frame" x="79" y="175" width="194" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="kWh/ t clinker" minimumFontSize="17" id="Srm-WI-uua">
@@ -1441,8 +1490,10 @@
                                         </segments>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3YB-LO-R9V">
-                                        <rect key="frame" x="679" y="1344" width="125" height="44"/>
+                                        <rect key="frame" x="720" y="1355" width="110" height="38"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Calculate">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1500,7 +1551,7 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plant Configuration Inputs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BRU-73-R94">
                                         <rect key="frame" x="77" y="790" width="264" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number of Cement Mills ：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UIa-Jb-KjT">
@@ -1512,7 +1563,7 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plant Major KPIs: Specific Power Consumptions &amp; Generation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HdQ-x0-ykE">
                                         <rect key="frame" x="79" y="294" width="607" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="t cement/a" minimumFontSize="17" id="ceB-4I-xWU">
@@ -1520,12 +1571,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plant Capacity Inputs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6R0-OL-2io">
-                                        <rect key="frame" x="79" y="492" width="235" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="t cement/hour" minimumFontSize="17" id="dDt-83-LNg">
                                         <rect key="frame" x="746" y="568" width="200" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1591,20 +1636,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <navigationBar contentMode="scaleToFill" id="YaO-Sq-wtz">
-                                        <rect key="frame" x="20" y="20" width="1024" height="44"/>
-                                        <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
-                                        <items>
-                                            <navigationItem title="Input" id="cwK-iu-kbe">
-                                                <barButtonItem key="leftBarButtonItem" title="Back" id="z8d-Ui-qbp">
-                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <connections>
-                                                        <action selector="back:" destination="3t6-ve-U8v" id="Y1X-xQ-X3w"/>
-                                                    </connections>
-                                                </barButtonItem>
-                                            </navigationItem>
-                                        </items>
-                                    </navigationBar>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Average Number of Preheater Stages :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sw4-k6-797">
                                         <rect key="frame" x="96" y="950" width="294" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1640,7 +1671,7 @@
                                         <rect key="frame" x="77" y="615" width="212" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Average Specific Heat Cost :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="52e-cN-Oix">
@@ -1705,14 +1736,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SE_Logo.png" id="joI-c7-5lh">
-                                        <rect key="frame" x="945" y="25" width="90" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IoZ-wo-Vli">
-                                        <rect key="frame" x="325" y="1344" width="75" height="44"/>
+                                        <rect key="frame" x="345" y="1355" width="110" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Save">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1721,9 +1750,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ru1-gx-d3A">
-                                        <rect key="frame" x="235" y="1344" width="75" height="44"/>
+                                        <rect key="frame" x="195" y="1355" width="110" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Save as">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1731,16 +1762,46 @@
                                             <action selector="saveAs:" destination="3t6-ve-U8v" eventType="touchUpInside" id="LZP-yb-EKa"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plant Capacity Inputs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6R0-OL-2io">
+                                        <rect key="frame" x="79" y="492" width="235" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" id="G5G-Y8-Ozz">
+                                        <rect key="frame" x="312" y="593" width="140" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="3t6-ve-U8v" id="Khz-J0-Kj5"/>
+                                            <outlet property="delegate" destination="3t6-ve-U8v" id="n7f-DC-vBL"/>
+                                        </connections>
+                                    </pickerView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.98486539230000003" blue="0.86100612300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" id="YaO-Sq-wtz">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                <color key="tintColor" red="0.11649050800000001" green="0.85849808670000005" blue="0.2294042691" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Input" id="cwK-iu-kbe">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="z8d-Ui-qbp">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="back:" destination="3t6-ve-U8v" id="Y1X-xQ-X3w"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6Z3-Bd-EhQ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="Calculate_Saved" destination="3YB-LO-R9V" id="h22-Dx-Vpe"/>
+                        <outlet property="SaveAs_Saved" destination="ru1-gx-d3A" id="e2w-9v-vgq"/>
+                        <outlet property="Save_Saved" destination="IoZ-wo-Vli" id="Zi8-WR-WRs"/>
                         <outlet property="averageClinkerLineCapacity" destination="0sX-AK-uXW" id="yWc-Wh-4lm"/>
                         <outlet property="averageNumberOfPreheaterStages" destination="Pdw-l2-16P" id="T7v-hS-4HP"/>
                         <outlet property="averageSpecificHeatCost" destination="4vc-TV-cd9" id="9Qm-L4-51a"/>
@@ -1755,6 +1816,7 @@
                         <outlet property="navigationBar" destination="YaO-Sq-wtz" id="Hl8-N6-DGP"/>
                         <outlet property="numberOfCementMills" destination="0lu-3u-GyC" id="u55-Di-Se7"/>
                         <outlet property="numberOfClinkerLines" destination="AIj-I6-JfR" id="rLA-x7-yum"/>
+                        <outlet property="pickerView" destination="G5G-Y8-Ozz" id="KJq-qj-Gt4"/>
                         <outlet property="plantCementFGSPC" destination="3B0-VJ-c2U" id="No5-VT-bVg"/>
                         <outlet property="plantClinkerSHC" destination="gKH-KR-OWc" id="b7S-eg-j6Q"/>
                         <outlet property="plantClinkerSPC" destination="Srm-WI-uua" id="UOa-aD-PCF"/>
@@ -1768,37 +1830,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yM5-KB-PmW" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1751" y="-2906"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="qcA-q7-dE4">
-            <objects>
-                <viewController id="TpQ-8o-CZX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jg5-qZ-G2i">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8av-kd-FdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
+            <point key="canvasLocation" x="-1821" y="-2910"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Big View Result.png" width="764" height="557"/>
         <image name="CementResult.png" width="104" height="85"/>
-        <image name="Result.png" width="766" height="560"/>
+        <image name="Input1.png" width="1024" height="768"/>
+        <image name="Input2.png" width="1024" height="768"/>
+        <image name="MainMenu.png" width="1024" height="768"/>
+        <image name="Result.png" width="1024" height="768"/>
+        <image name="Result2.png" width="1024" height="768"/>
         <image name="SE_Logo.png" width="150" height="62"/>
-        <image name="Save as.png" width="765" height="556"/>
-        <image name="Saved data.png" width="767" height="558"/>
-        <image name="delete.png" width="766" height="559"/>
-        <image name="detail-bottom.png" width="765" height="558"/>
-        <image name="detail.png" width="765" height="558"/>
-        <image name="finish input.png" width="764" height="555"/>
-        <image name="input.png" width="767" height="559"/>
-        <image name="main menu.png" width="769" height="560"/>
+        <image name="SavedData.png" width="1024" height="768"/>
+        <image name="SavedData2.png" width="1024" height="768"/>
+        <image name="SavedData3.png" width="2048" height="1536"/>
+        <image name="SavedData4.png" width="2048" height="1536"/>
+        <image name="SavedData5.png" width="2048" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="slS-Ow-fer"/>
+        <segue reference="LzV-7a-S5d"/>
     </inferredMetricsTieBreakers>
 </document>

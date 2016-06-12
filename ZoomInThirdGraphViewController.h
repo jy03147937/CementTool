@@ -18,6 +18,7 @@
     float maximumAnnualSavingsOnHeatCostfromClinkerProduction;
     float achievableAnnualSavingsOnHeatConsumptionfromClinkerProduction;
     float achievableAnnualSavingsOnHeatCostfromClinkerProduction;
+    NSString * selectedCurrency;
 }
 
 @property float actualSHC;
@@ -28,4 +29,5 @@
 @property float achievableAnnualSavingsOnHeatConsumptionfromClinkerProduction;
 @property float achievableAnnualSavingsOnHeatCostfromClinkerProduction;
 @property NSString * name;
+@property NSString * selectedCurrency;
 @end

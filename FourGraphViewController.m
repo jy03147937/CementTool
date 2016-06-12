@@ -20,6 +20,7 @@
 - (IBAction)Back:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *cumulatedLabel;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 
 
 @end
@@ -38,7 +39,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
+    
+    CGFloat navHeight = 64.0f;
+    CGRect frame = CGRectMake(0.0f, 0.0f, 1024.0f, navHeight);
+    [_navBar setFrame:frame];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -53,7 +58,7 @@
     float totalSavings = [self.calculator calculateTotalSavingsOnDisplay];
     NSString *numberString = [numberFormatter stringFromNumber: [NSNumber numberWithFloat:totalSavings]];
     
-    self.cumulatedLabel.text = [[NSString alloc] initWithFormat:@"Cumulated Achievable Annual Cost Saving:%@  Euro/a",numberString];
+    self.cumulatedLabel.text = [[[NSString alloc] initWithFormat:@"Cumulated Achievable Annual Cost Saving:%@  Currency/a",numberString] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     self.cumulatedLabel.textColor = RGB(255.0, 66.0, 93.0);
     self.cumulatedLabel.highlighted = YES;
     self.cumulatedLabel.font = [UIFont boldSystemFontOfSize:19];
@@ -82,6 +87,7 @@
         destViewController.maximumAnnualSavingsOnPowerConsumptionfromClinkerProduction_s = self.calculator.maximumAnnualSavingsOnPowerConsumptionfromClinkerProduction;
         destViewController.maximumAnnualSavingsOnPowerCostfromClinkerProduction_s = self.calculator.maximumAnnualSavingsOnPowerCostfromClinkerProduction;
         destViewController.name_s = self.calculator.plantName;
+        destViewController.selectedCurrency = self.selectedCurrency;
     };
     
     if([segue.identifier isEqualToString:@"second"]){
@@ -94,6 +100,7 @@
         destViewController.achievableAnnualSavingsOnPowerConsumptionfromCementFinishGrinding = self.calculator.achievableAnnualSavingsOnPowerConsumptionfromCementFinishGrinding;
         destViewController.achievableAnnualSavingsOnPowerCostfromCementFinishGrinding = self.calculator.achievableAnnualSavingsOnPowerCostfromCementFinishGrinding;
         destViewController.name_s = self.calculator.plantName;
+        destViewController.selectedCurrency = self.selectedCurrency;
     };
     
     if([segue.identifier isEqualToString:@"third"]){
@@ -106,6 +113,7 @@
         destViewController.achievableAnnualSavingsOnHeatConsumptionfromClinkerProduction_s = self.calculator.achievableAnnualSavingsOnHeatConsumptionfromClinkerProduction;
         destViewController.achievableAnnualSavingsOnHeatCostfromClinkerProduction_s = self.calculator.achievableAnnualSavingsOnHeatCostfromClinkerProduction;
         destViewController.name_s = self.calculator.plantName;
+        destViewController.selectedCurrency = self.selectedCurrency;
     };
     
     if([segue.identifier isEqualToString:@"forth"]){
@@ -115,6 +123,7 @@
         destViewController.achievableAnnualSavingsOnPowerConsumptionfromWHRPowerGenerationv_s = self.calculator.achievableAnnualSavingsOnPowerConsumptionfromWHRPowerGeneration;
         destViewController.achievableAnnualSavingsOnPowerCostfromWHRPowerGeneration_s = self.calculator.achievableAnnualSavingsOnPowerCostfromWHRPowerGeneration;
         destViewController.name_s = self.calculator.plantName;
+        destViewController.selectedCurrency = self.selectedCurrency;
     };
     
 }

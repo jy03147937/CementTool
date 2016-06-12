@@ -37,8 +37,18 @@
     self.input.titleLabel.font = [UIFont fontWithName:@"helvetica" size:20];
     self.result.titleLabel.font = [UIFont fontWithName:@"helvetica" size:20];
     self.plantsList.titleLabel.font = [UIFont fontWithName:@"helvetica" size:20];
-    self.navigationController.navigationBarHidden = NO;
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.navigationController.navigationBar.translucent = NO;
+    
+    CGFloat navHeight = 64.0f;
+    CGRect frame = CGRectMake(0.0f, 0.0f, 1024.0f, navHeight);
+    [_navBar setFrame:frame];
+    
+    [_userGuide.layer setCornerRadius:8.0];
+    [_input.layer setCornerRadius:8.0];
+    [_result.layer setCornerRadius:8.0];
+    [_plantsList.layer setCornerRadius:8.0];
+
+
 }
 
 - (void)didReceiveMemoryWarning
