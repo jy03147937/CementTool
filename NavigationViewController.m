@@ -70,7 +70,7 @@
         //production/Users/aocc/Documents/cementTool/cementTool.xcodeproj
         destViewController.calculator.totalPlantClinkerProduction = 2845671.0;
         destViewController.calculator.totalPlantCementProduction = 2479648.0;
-        
+                NSLog([NSString stringWithFormat:@"%f",destViewController.calculator.totalPlantClinkerProduction]);
         //KPIS
         destViewController.calculator.plantClinkerSPC = 63.0;
         destViewController.calculator.plantClinkerSHC = 3392.0;
@@ -79,12 +79,13 @@
         
         //capacity
         destViewController.calculator.averageClinkerLineCapacity = 5290.0;
-        destViewController.calculator.totalPlantCementMilloutput = 160.0;
+        destViewController.calculator.totalPlantCementMilloutput = 140.0;
         
         //plant cost
         destViewController.calculator.averageSpecificHeatCost = 3.29;
         destViewController.calculator.averageSpecificPowerCost = 55.3;
         destViewController.calculator.averageSpecificPowerCostFromWHR = 0.0;
+        destViewController.selectedCurrency = @"USD";
         
         //plant configuration
         destViewController.calculator.numberOfClinkerLines = 4;

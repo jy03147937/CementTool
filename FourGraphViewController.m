@@ -58,7 +58,7 @@
     float totalSavings = [self.calculator calculateTotalSavingsOnDisplay];
     NSString *numberString = [numberFormatter stringFromNumber: [NSNumber numberWithFloat:totalSavings]];
     
-    self.cumulatedLabel.text = [[[NSString alloc] initWithFormat:@"Cumulated Achievable Annual Cost Saving:%@  Currency/a",numberString] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
+    self.cumulatedLabel.text = [[[NSString alloc] initWithFormat:@"Accumulated Achievable Annual Cost Savings: %@  Currency/y",numberString] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     self.cumulatedLabel.textColor = RGB(255.0, 66.0, 93.0);
     self.cumulatedLabel.highlighted = YES;
     self.cumulatedLabel.font = [UIFont boldSystemFontOfSize:19];
@@ -95,6 +95,7 @@
         destViewController.actualFGSPC_s2 = self.calculator.plantCementFGSPC;
         destViewController.achievableFGSPC_s2  = [self.calculator chooseAchievableFGSPC];
         destViewController.intAdvancedFGSPC_s2 = [self.calculator chooseIntAdvancedFGSPC];
+        NSLog([NSString stringWithFormat:@"%f",[self.calculator chooseIntAdvancedFGSPC]]);
         destViewController.maximumAnnualSavingsOnPowerConsumptionfromCementFinishGrinding = self.calculator.maximumAnnualSavingsOnPowerConsumptionfromCementFinishGrinding;
         destViewController.maximumAnnualSavingsOnPowerCostfromCementFinishGrinding = self.calculator.maximumAnnualSavingsOnPowerCostfromCementFinishGrinding;
         destViewController.achievableAnnualSavingsOnPowerConsumptionfromCementFinishGrinding = self.calculator.achievableAnnualSavingsOnPowerConsumptionfromCementFinishGrinding;

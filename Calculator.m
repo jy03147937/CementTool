@@ -176,6 +176,7 @@
 
 
 - (float)chooseAchievableFGSPC{
+                    NSLog([NSString stringWithFormat:@"%f",    self.totalPlantCementMilloutput]);
     if (self.totalPlantCementMilloutput < 50)
     {
         if ([self.cementGrindingProcess isEqualToString:@"VerticalMill or RollerPress+BallMill"])
@@ -205,6 +206,7 @@
             self.achievableCementFGSPC=33;
         }
     }
+
     return self.achievableCementFGSPC;
 }
 

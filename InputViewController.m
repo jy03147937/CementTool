@@ -44,7 +44,7 @@
 {
     [super viewDidLoad];
     
-    currencyOptions = [[NSArray alloc] initWithObjects:@"USD",@"CNY",@"KWR", nil];
+    currencyOptions = [[NSArray alloc] initWithObjects:@"USD",@"CNY",@"KWR",@"EUR",@"INR",@"TRY",@"IDR",@"PHP", nil];
     
     CGFloat navHeight = 64.0f;
     CGRect frame = CGRectMake(0.0f, 0.0f, 1024.0f, navHeight);
