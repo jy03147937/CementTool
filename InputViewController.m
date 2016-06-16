@@ -78,7 +78,7 @@
 
                 [self.pickerView selectRow:i inComponent:0 animated:false];
                 
-                [self setThePlaceHolder:[self.selectedCurrency stringByAppendingString:@"MWh"]];
+                [self setThePlaceHolder:self.selectedCurrency];
                 break;
             }
         }
@@ -331,7 +331,6 @@
 #pragma mark-the delegate method implementation for picker view
 //must have
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    
     return 1;
 }
 
@@ -339,16 +338,8 @@
     return [currencyOptions count];
 }
 
-//optional
-/*
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    NSString *name = currencyOptions[row];
-    return name;
-}
- */
-
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    NSString *str = [[currencyOptions[row] description] stringByAppendingString:@"/MWh"];
+    NSString *str = [currencyOptions[row] description];
     
     [self setThePlaceHolder:str];
     //self.averageSpecificHeatCost.placeholder = currencyOptions[row] + @"/MWh";
@@ -367,21 +358,19 @@
 
 -(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     UILabel *myView = nil;
-    myView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 75, 36)];
+    myView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 36)];
     myView.font = [UIFont systemFontOfSize:14];
+    myView.textAlignment = NSTextAlignmentCenter;
     myView.text = currencyOptions[row];
     myView.layer.borderWidth = 0;
-
-    if (self.plantName1 != nil) {
-
-    }
+    
     return myView;
 }
 
 #pragma : private method
 -(void)setThePlaceHolder:(NSString *)str{
-    self.averageSpecificHeatCost.placeholder = str;
-    self.averageSpecificPowerCost.placeholder = str;
-    self.averageSpecificPowerCostFromWHR.placeholder = str;
+    self.averageSpecificHeatCost.placeholder = [str stringByAppendingString:@"/GJ"];
+    self.averageSpecificPowerCost.placeholder = [str stringByAppendingString:@"/MWh"];
+    self.averageSpecificPowerCostFromWHR.placeholder = [str stringByAppendingString:@"/MWh"];
 }
 @end

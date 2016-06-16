@@ -115,7 +115,7 @@ CGFloat const CPDBarInitialX_s = 0.93f;
     
     graph.paddingBottom = 105.0f;
     graph.paddingLeft  = 50.0f;
-    graph.paddingTop    = -8.0f;
+    graph.paddingTop    = 0.0f;
     graph.paddingRight  = -10.0f;  //图表到边界的距离.之所以把值设为负值，其原因是图的上边与右边有白线，十分不美观，为了隐藏他们
     // 3 - Set up styles
     CPTMutableTextStyle *titleStyle = [CPTMutableTextStyle textStyle];
@@ -188,7 +188,7 @@ CGFloat const CPDBarInitialX_s = 0.93f;
     // 3 - Configure the x-axis
     axisSet.xAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
     if (self.actualSPC_s < self.achievableSPC_s) {
-    axisSet.xAxis.title = [[[NSString alloc] initWithFormat:@"\nInt. Advanced:              %.1f  kWh/t.clinker\nAchievable Target:       %.1f  kWh/t.clinker\nActual:                           %.1f  kWh/t.clinker\nTarget Savings:            %@  Currency/a",self.intAdvancedSPC_s,(self.intAdvancedSPC_s+self.actualSPC_s)/2,self.actualSPC_s,[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromClinkerProduction_s/2]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
+    axisSet.xAxis.title = [[[NSString alloc] initWithFormat:@"\nInt. Advanced:              %.1f  kWh/t.clinker\nAchievable Target:       %.1f  kWh/t.clinker\nActual:                          %.1f  kWh/t.clinker\nTarget Savings:            %@  Currency/a",self.intAdvancedSPC_s,(self.intAdvancedSPC_s+self.actualSPC_s)/2,self.actualSPC_s,[self numberTransfer:self.maximumAnnualSavingsOnPowerCostfromClinkerProduction_s/2]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];
     }
     else{
     axisSet.xAxis.title = [[[NSString alloc] initWithFormat:@"\nInt. Advanced:              %.1f  kWh/t.clinker\nAchievable Target:       %.1f  kWh/t.clinker\nActual:                           %.1f  kWh/t.clinker\nTarget Savings:            %@  Currency/a",self.intAdvancedSPC_s,self.achievableSPC_s,self.actualSPC_s,[self numberTransfer:self.achievableAnnualSavingsOnPowerCostfromClinkerProduction_s]] stringByReplacingOccurrencesOfString:@"Currency" withString:self.selectedCurrency];

@@ -10,8 +10,6 @@
 
 @implementation Calculator
 
-
-
 -(id)init
 {
     if (self = [super init])
@@ -44,31 +42,48 @@
 {
     if (self.averageClinkerLineCapacity<2500)
     {
-        if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        if ([self.rawGrindingProcess isEqualToString:@"Roller Press"])
         {
-            self.achievableClinkerSPC=68;
+            self.achievableClinkerSPC=54.1;
         }
-        else self.achievableClinkerSPC=75.7;
+        else if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        {
+            self.achievableClinkerSPC=56.7;
+        }
+        else self.achievableClinkerSPC=64.8;
     }
     else if((self.averageClinkerLineCapacity>=2500)&&(self.averageClinkerLineCapacity<4000))
     {
-        if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        if ([self.rawGrindingProcess isEqualToString:@"Roller Press"])
         {
-            self.achievableClinkerSPC=65;
+            self.achievableClinkerSPC=52.0;
         }
-        else self.achievableClinkerSPC=72.7;
+        else if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        {
+            self.achievableClinkerSPC=54.6;
+        }
+        else self.achievableClinkerSPC=62.7;
     }
     else if ((self.averageClinkerLineCapacity>=4000)&&(self.averageClinkerLineCapacity<6000)){
-        if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        if ([self.rawGrindingProcess isEqualToString:@"Roller Press"])
         {
-            self.achievableClinkerSPC=56;
+            self.achievableClinkerSPC=49.9;
         }
-        else self.achievableClinkerSPC=63.7;
+        else if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        {
+            self.achievableClinkerSPC=52.5;
+        }
+        else self.achievableClinkerSPC=60.6;
     } else {
-        if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        if ([self.rawGrindingProcess isEqualToString:@"Roller Press"])
         {
-            self.achievableClinkerSPC=53;
+            self.achievableClinkerSPC=48.8;
         }
+        else if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        {
+            self.achievableClinkerSPC=51.5;
+        }
+        else self.achievableClinkerSPC=59.5;
     }
     return self.achievableClinkerSPC;
 }
@@ -76,31 +91,49 @@
 - (float)chooseIntAdvancedSPC{
     if (self.averageClinkerLineCapacity<2500)
     {
-        if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        if ([self.rawGrindingProcess isEqualToString:@"Roller Press"])
         {
-            self.intAdvancedClinkerSPC=66;
+            self.achievableClinkerSPC=51.5;
         }
-        else self.intAdvancedClinkerSPC=73.7;
+        else if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        {
+            self.intAdvancedClinkerSPC=54.0;
+        }
+        else self.intAdvancedClinkerSPC=61.7;
     }
     else if((self.averageClinkerLineCapacity>=2500)&&(self.averageClinkerLineCapacity<4000))
     {
-        if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        if ([self.rawGrindingProcess isEqualToString:@"Roller Press"])
         {
-            self.intAdvancedClinkerSPC=58;
+            self.achievableClinkerSPC=49.5;
         }
-        else self.intAdvancedClinkerSPC=65.7;
+        else if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        {
+            self.intAdvancedClinkerSPC=52;
+        }
+        else self.intAdvancedClinkerSPC=59.7;
     }
-    else  if ((self.averageClinkerLineCapacity>=4000)&&(self.averageClinkerLineCapacity<6000)){
-        if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+    else  if ((self.averageClinkerLineCapacity>=4000)&&(self.averageClinkerLineCapacity<6000))
+    {
+        if ([self.rawGrindingProcess isEqualToString:@"Roller Press"])
         {
-            self.intAdvancedClinkerSPC=53;
+            self.achievableClinkerSPC=47.5;
         }
-        else self.intAdvancedClinkerSPC=60.7;
+        else if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        {
+            self.intAdvancedClinkerSPC=50.0;
+        }
+        else self.intAdvancedClinkerSPC=57.7;
     } else {
-        if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        if ([self.rawGrindingProcess isEqualToString:@"Roller Press"])
         {
-            self.intAdvancedClinkerSPC=49;
+            self.achievableClinkerSPC=46.5;
         }
+        else if ([self.rawGrindingProcess isEqualToString:@"Vertical Mill"])
+        {
+            self.intAdvancedClinkerSPC=49.0;
+        }
+        else self.intAdvancedClinkerSPC=56.7;
     }
     return self.intAdvancedClinkerSPC;
     
@@ -116,25 +149,25 @@
         {
             self.achievableClinkerSHC = 4470;
         }
-        else self.achievableClinkerSHC = 3365;
+        else self.achievableClinkerSHC = 3225;
     }
     else if((self.averageClinkerLineCapacity>=2500)&&(self.averageClinkerLineCapacity<4000))
     {
         if ([self.burningProcess isEqualToString:@"Modern Dry"])
         {
-            self.achievableClinkerSHC=3160;
+            self.achievableClinkerSHC=3134;
         }
     }
     else if ((self.averageClinkerLineCapacity>=4000)&&(self.averageClinkerLineCapacity<6000))
     {
         if ([self.burningProcess isEqualToString:@"Modern Dry"])
         {
-            self.achievableClinkerSHC=3100;
+            self.achievableClinkerSHC=2954;
         }
     } else {
         if ([self.burningProcess isEqualToString:@"Modern Dry"])
         {
-            self.achievableClinkerSHC=3000;
+            self.achievableClinkerSHC=2924;
         }
     }
     return self.achievableClinkerSHC;
@@ -151,7 +184,7 @@
         {
             self.intAdvancedClinkerSHC = 3366;
         }
-        else self.intAdvancedClinkerSHC = 3160;
+        else self.intAdvancedClinkerSHC = 3131;
     }
     else if((self.averageClinkerLineCapacity>=2500)&&(self.averageClinkerLineCapacity<4000))
     {
@@ -163,12 +196,12 @@
     else if ((self.averageClinkerLineCapacity>=4000)&&(self.averageClinkerLineCapacity<6000)){
         if ([self.burningProcess isEqualToString:@"Modern Dry"])
         {
-            self.intAdvancedClinkerSHC=3000;
+            self.intAdvancedClinkerSHC=2867;
         }
     } else {
         if ([self.burningProcess isEqualToString:@"Modern Dry"])
         {
-            self.intAdvancedClinkerSHC=2900;
+            self.intAdvancedClinkerSHC=2839;
         }
     }
     return self.intAdvancedClinkerSHC;
@@ -176,7 +209,7 @@
 
 
 - (float)chooseAchievableFGSPC{
-                    NSLog([NSString stringWithFormat:@"%f",    self.totalPlantCementMilloutput]);
+
     if (self.totalPlantCementMilloutput < 50)
     {
         if ([self.cementGrindingProcess isEqualToString:@"VerticalMill or RollerPress+BallMill"])
@@ -189,21 +222,29 @@
     {
         if ([self.cementGrindingProcess isEqualToString:@"VerticalMill or RollerPress+BallMill"])
         {
-            self.achievableCementFGSPC=35;
+            self.achievableCementFGSPC=31.5;
         }
-        else self.achievableCementFGSPC = 40;
+        else self.achievableCementFGSPC = 36.75;
     }
     else if((self.totalPlantCementMilloutput>=100)&&(self.totalPlantCementMilloutput<150))
     {
         if ([self.cementGrindingProcess isEqualToString:@"VerticalMill or RollerPress+BallMill"])
         {
-            self.achievableCementFGSPC=34;
+            self.achievableCementFGSPC=29.4;
         }
-        else self.achievableCementFGSPC = 39;
-    } else {
+        else self.achievableCementFGSPC = 34.65;
+    }
+    else if((self.totalPlantCementMilloutput>=151)&&(self.totalPlantCementMilloutput<200))
+    {
         if ([self.cementGrindingProcess isEqualToString:@"VerticalMill or RollerPress+BallMill"])
         {
-            self.achievableCementFGSPC=33;
+            self.achievableCementFGSPC=27.3;
+        }
+    }
+    else {
+        if ([self.cementGrindingProcess isEqualToString:@"VerticalMill or RollerPress+BallMill"])
+        {
+            self.achievableCementFGSPC=25.2;
         }
     }
 
@@ -223,9 +264,9 @@
     {
         if ([self.cementGrindingProcess isEqualToString:@"VerticalMill or RollerPress+BallMill"])
         {
-            self.intAdvancedCementFGSPC=33;
+            self.intAdvancedCementFGSPC=30;
         }
-        else self.intAdvancedCementFGSPC = 38;
+        else self.intAdvancedCementFGSPC = 35;
     }
     else if((self.totalPlantCementMilloutput>=100)&&(self.totalPlantCementMilloutput<150))
     {
@@ -234,12 +275,21 @@
             self.intAdvancedCementFGSPC=28;
         }
         else self.intAdvancedCementFGSPC = 33;
-    } else {
+    }
+    else if((self.totalPlantCementMilloutput>=151)&&(self.totalPlantCementMilloutput<200))
+    {
         if ([self.cementGrindingProcess isEqualToString:@"VerticalMill or RollerPress+BallMill"])
         {
-            self.intAdvancedCementFGSPC=27;
+            self.intAdvancedCementFGSPC=26;
         }
     }
+    else {
+        if ([self.cementGrindingProcess isEqualToString:@"VerticalMill or RollerPress+BallMill"])
+        {
+            self.achievableCementFGSPC=24;
+        }
+    }
+    
     return self.intAdvancedCementFGSPC;
 }
 
@@ -252,7 +302,7 @@
                   self.achievableAverageWHRnePowerGeneration = 14.5;
               }
               else if([self.dryingRequirment isEqualToString:@"M"]) {
-                  self.achievableAverageWHRnePowerGeneration = 16.2;
+                  self.achievableAverageWHRnePowerGeneration = 16.3;
               }
               else self.achievableAverageWHRnePowerGeneration = 18;
               break;
@@ -413,177 +463,177 @@
 
 - (float)chooseIntAdvancedWHRClinkerSPG{
     if (self.plantClinkerSHC > ([self chooseAchievableSHC]*1.05))
-  {
-    switch (self.averageNumberOfPreheaterStages)
     {
-        case 0:
+        switch (self.averageNumberOfPreheaterStages)
         {
-            if ([self.dryingRequirment isEqualToString:@"H"]) {
-                self.intAdvancedAverageWHRnePowerGeneration = 14.5;
+            case 0:
+            {
+                if ([self.dryingRequirment isEqualToString:@"H"]) {
+                    self.intAdvancedAverageWHRnePowerGeneration = 14.5;
+                }
+                else if([self.dryingRequirment isEqualToString:@"M"]) {
+                    self.intAdvancedAverageWHRnePowerGeneration = 16.2;
+                }
+                else self.intAdvancedAverageWHRnePowerGeneration = 18;
+                break;
             }
-            else if([self.dryingRequirment isEqualToString:@"M"]) {
-                self.intAdvancedAverageWHRnePowerGeneration = 16.2;
+            case 2:
+            {
+                if ([self.dryingRequirment isEqualToString:@"H"])
+                {
+                    if ([self.coolerType isEqualToString:@"Satelite Cooler"])
+                    {
+                        if([self.kilnGasBypass isEqualToString:@"Yes"])
+                        {
+                            self.intAdvancedAverageWHRnePowerGeneration = 43;
+                        }
+                        else self.intAdvancedAverageWHRnePowerGeneration = 46;
+                    }
+                    else if([self.kilnGasBypass isEqualToString:@"Yes"])
+                    {
+                        self.intAdvancedAverageWHRnePowerGeneration = 51;
+                    }
+                    else self.intAdvancedAverageWHRnePowerGeneration = 54;
+                }
+                else if ([self.dryingRequirment isEqualToString:@"M"])
+                {
+                    if ([self.coolerType isEqualToString:@"Satelite Cooler"])
+                    {
+                        if([self.kilnGasBypass isEqualToString:@"Yes"])
+                        {
+                            self.intAdvancedAverageWHRnePowerGeneration = 44.75;
+                        }
+                        else self.intAdvancedAverageWHRnePowerGeneration = 47.75;
+                    }
+                    else if([self.kilnGasBypass isEqualToString:@"Yes"])
+                    {
+                        self.intAdvancedAverageWHRnePowerGeneration = 52.75;
+                    }
+                    else self.intAdvancedAverageWHRnePowerGeneration = 55.75;
+                }
+                else
+                    if ([self.coolerType isEqualToString:@"Satelite Cooler"])
+                    {
+                        if([self.kilnGasBypass isEqualToString:@"Yes"])
+                        {
+                            self.intAdvancedAverageWHRnePowerGeneration = 46.5;
+                        }
+                        else self.intAdvancedAverageWHRnePowerGeneration = 49.5;
+                    }
+                    else if([self.kilnGasBypass isEqualToString:@"Yes"])
+                    {
+                        self.intAdvancedAverageWHRnePowerGeneration = 54.5;
+                    }
+                    else self.intAdvancedAverageWHRnePowerGeneration = 57.5;
+                break;
             }
-            else self.intAdvancedAverageWHRnePowerGeneration = 18;
-            break;
+            case 4:
+            {
+                if ([self.dryingRequirment isEqualToString:@"H"])
+                {
+                    if ([self.coolerType isEqualToString:@"Satelite Cooler"])
+                    {
+                        if([self.kilnGasBypass isEqualToString:@"Yes"])
+                        {
+                            self.intAdvancedAverageWHRnePowerGeneration = 25;
+                        }
+                        else self.intAdvancedAverageWHRnePowerGeneration = 28;
+                    }
+                    else if([self.kilnGasBypass isEqualToString:@"Yes"])
+                    {
+                        self.intAdvancedAverageWHRnePowerGeneration = 33;
+                    }
+                    else self.intAdvancedAverageWHRnePowerGeneration = 36;
+                }
+                else if ([self.dryingRequirment isEqualToString:@"M"])
+                {
+                    if ([self.coolerType isEqualToString:@"Satelite Cooler"])
+                    {
+                        if([self.kilnGasBypass isEqualToString:@"Yes"])
+                        {
+                            self.intAdvancedAverageWHRnePowerGeneration = 26.75;
+                        }
+                        else self.intAdvancedAverageWHRnePowerGeneration = 29.75;
+                    }
+                    else if([self.kilnGasBypass isEqualToString:@"Yes"])
+                    {
+                        self.intAdvancedAverageWHRnePowerGeneration = 34.75;
+                    }
+                    else self.intAdvancedAverageWHRnePowerGeneration = 37.75;
+                }
+                else
+                    if ([self.coolerType isEqualToString:@"Satelite Cooler"])
+                    {
+                        if([self.kilnGasBypass isEqualToString:@"Yes"])
+                        {
+                            self.intAdvancedAverageWHRnePowerGeneration = 28.5;
+                        }
+                        else self.intAdvancedAverageWHRnePowerGeneration = 31.5;
+                    }
+                    else if([self.kilnGasBypass isEqualToString:@"Yes"])
+                    {
+                        self.intAdvancedAverageWHRnePowerGeneration = 36.5;
+                    }
+                    else self.intAdvancedAverageWHRnePowerGeneration = 39.5;
+                break;
+            }
+            case 5:
+            {
+                if ([self.dryingRequirment isEqualToString:@"H"])
+                {
+                    if([self.kilnGasBypass isEqualToString:@"Yes"])
+                    {
+                        self.intAdvancedAverageWHRnePowerGeneration = 28;
+                    }
+                    else self.intAdvancedAverageWHRnePowerGeneration = 31;
+                }
+                else if ([self.dryingRequirment isEqualToString:@"M"])
+                {
+                    if([self.kilnGasBypass isEqualToString:@"Yes"])
+                    {
+                        self.intAdvancedAverageWHRnePowerGeneration = 29.75;
+                    }
+                    else self.intAdvancedAverageWHRnePowerGeneration = 32.75;
+                }
+                else
+                    if([self.kilnGasBypass isEqualToString:@"Yes"])
+                    {
+                        self.intAdvancedAverageWHRnePowerGeneration = 31.5;
+                    }
+                    else self.intAdvancedAverageWHRnePowerGeneration = 34.5;
+                break;
+            }
+            case 6:
+            {
+                if ([self.dryingRequirment isEqualToString:@"H"])
+                {
+                    if([self.kilnGasBypass isEqualToString:@"Yes"])
+                    {
+                        self.intAdvancedAverageWHRnePowerGeneration = 21.5;
+                    }
+                    else self.intAdvancedAverageWHRnePowerGeneration = 24.5;
+                }
+                else if ([self.dryingRequirment isEqualToString:@"M"])
+                {
+                    if([self.kilnGasBypass isEqualToString:@"Yes"])
+                    {
+                        self.intAdvancedAverageWHRnePowerGeneration = 22.25;
+                    }
+                    else self.intAdvancedAverageWHRnePowerGeneration = 22.25;
+                }
+                else
+                    if([self.kilnGasBypass isEqualToString:@"Yes"])
+                    {
+                        self.intAdvancedAverageWHRnePowerGeneration = 23;
+                    }
+                    else self.intAdvancedAverageWHRnePowerGeneration = 26;
+                break;
+            }
+            default:
+                break;
         }
-        case 2:
-        {
-            if ([self.dryingRequirment isEqualToString:@"H"])
-            {
-                if ([self.coolerType isEqualToString:@"Satelite Cooler"])
-                {
-                    if([self.kilnGasBypass isEqualToString:@"Yes"])
-                    {
-                        self.intAdvancedAverageWHRnePowerGeneration = 43;
-                    }
-                    else self.intAdvancedAverageWHRnePowerGeneration = 46;
-                }
-                else if([self.kilnGasBypass isEqualToString:@"Yes"])
-                {
-                    self.intAdvancedAverageWHRnePowerGeneration = 51;
-                }
-                else self.intAdvancedAverageWHRnePowerGeneration = 54;
-            }
-            else if ([self.dryingRequirment isEqualToString:@"M"])
-            {
-                if ([self.coolerType isEqualToString:@"Satelite Cooler"])
-                {
-                    if([self.kilnGasBypass isEqualToString:@"Yes"])
-                    {
-                        self.intAdvancedAverageWHRnePowerGeneration = 44.75;
-                    }
-                    else self.intAdvancedAverageWHRnePowerGeneration = 47.75;
-                }
-                else if([self.kilnGasBypass isEqualToString:@"Yes"])
-                {
-                    self.intAdvancedAverageWHRnePowerGeneration = 52.75;
-                }
-                else self.intAdvancedAverageWHRnePowerGeneration = 55.75;
-            }
-            else
-                if ([self.coolerType isEqualToString:@"Satelite Cooler"])
-                {
-                    if([self.kilnGasBypass isEqualToString:@"Yes"])
-                    {
-                        self.intAdvancedAverageWHRnePowerGeneration = 46.5;
-                    }
-                    else self.intAdvancedAverageWHRnePowerGeneration = 49.5;
-                }
-                else if([self.kilnGasBypass isEqualToString:@"Yes"])
-                {
-                    self.intAdvancedAverageWHRnePowerGeneration = 54.5;
-                }
-                else self.intAdvancedAverageWHRnePowerGeneration = 57.5;
-            break;
-        }
-        case 4:
-        {
-            if ([self.dryingRequirment isEqualToString:@"H"])
-            {
-                if ([self.coolerType isEqualToString:@"Satelite Cooler"])
-                {
-                    if([self.kilnGasBypass isEqualToString:@"Yes"])
-                    {
-                        self.intAdvancedAverageWHRnePowerGeneration = 25;
-                    }
-                    else self.intAdvancedAverageWHRnePowerGeneration = 28;
-                }
-                else if([self.kilnGasBypass isEqualToString:@"Yes"])
-                {
-                    self.intAdvancedAverageWHRnePowerGeneration = 33;
-                }
-                else self.intAdvancedAverageWHRnePowerGeneration = 36;
-            }
-            else if ([self.dryingRequirment isEqualToString:@"M"])
-            {
-                if ([self.coolerType isEqualToString:@"Satelite Cooler"])
-                {
-                    if([self.kilnGasBypass isEqualToString:@"Yes"])
-                    {
-                        self.intAdvancedAverageWHRnePowerGeneration = 26.75;
-                    }
-                    else self.intAdvancedAverageWHRnePowerGeneration = 29.75;
-                }
-                else if([self.kilnGasBypass isEqualToString:@"Yes"])
-                {
-                    self.intAdvancedAverageWHRnePowerGeneration = 34.75;
-                }
-                else self.intAdvancedAverageWHRnePowerGeneration = 37.75;
-            }
-            else
-                if ([self.coolerType isEqualToString:@"Satelite Cooler"])
-                {
-                    if([self.kilnGasBypass isEqualToString:@"Yes"])
-                    {
-                        self.intAdvancedAverageWHRnePowerGeneration = 28.5;
-                    }
-                    else self.intAdvancedAverageWHRnePowerGeneration = 31.5;
-                }
-                else if([self.kilnGasBypass isEqualToString:@"Yes"])
-                {
-                    self.intAdvancedAverageWHRnePowerGeneration = 36.5;
-                }
-                else self.intAdvancedAverageWHRnePowerGeneration = 39.5;
-            break;
-        }
-        case 5:
-        {
-            if ([self.dryingRequirment isEqualToString:@"H"])
-            {
-                if([self.kilnGasBypass isEqualToString:@"Yes"])
-                {
-                    self.intAdvancedAverageWHRnePowerGeneration = 28;
-                }
-                else self.intAdvancedAverageWHRnePowerGeneration = 31;
-            }
-            else if ([self.dryingRequirment isEqualToString:@"M"])
-            {
-                if([self.kilnGasBypass isEqualToString:@"Yes"])
-                {
-                    self.intAdvancedAverageWHRnePowerGeneration = 29.75;
-                }
-                else self.intAdvancedAverageWHRnePowerGeneration = 32.75;
-            }
-            else
-                if([self.kilnGasBypass isEqualToString:@"Yes"])
-                {
-                    self.intAdvancedAverageWHRnePowerGeneration = 31.5;
-                }
-                else self.intAdvancedAverageWHRnePowerGeneration = 34.5;
-            break;
-        }
-        case 6:
-        {
-            if ([self.dryingRequirment isEqualToString:@"H"])
-            {
-                if([self.kilnGasBypass isEqualToString:@"Yes"])
-                {
-                    self.intAdvancedAverageWHRnePowerGeneration = 21.5;
-                }
-                else self.intAdvancedAverageWHRnePowerGeneration = 24.5;
-            }
-            else if ([self.dryingRequirment isEqualToString:@"M"])
-            {
-                if([self.kilnGasBypass isEqualToString:@"Yes"])
-                {
-                    self.intAdvancedAverageWHRnePowerGeneration = 22.25;
-                }
-                else self.intAdvancedAverageWHRnePowerGeneration = 22.25;
-            }
-            else
-                if([self.kilnGasBypass isEqualToString:@"Yes"])
-                {
-                    self.intAdvancedAverageWHRnePowerGeneration = 23;
-                }
-                else self.intAdvancedAverageWHRnePowerGeneration = 26;
-            break;
-        }
-        default:
-            break;
+        return self.intAdvancedAverageWHRnePowerGeneration;
     }
-      return self.intAdvancedAverageWHRnePowerGeneration;
-  }
     else {
         switch (self.averageNumberOfPreheaterStages)
         {
@@ -593,7 +643,7 @@
                     self.intAdvancedAverageWHRnePowerGeneration = 11.5;
                 }
                 else if([self.dryingRequirment isEqualToString:@"M"]) {
-                    self.intAdvancedAverageWHRnePowerGeneration = 13.2;
+                    self.intAdvancedAverageWHRnePowerGeneration = 13.3;
                 }
                 else self.intAdvancedAverageWHRnePowerGeneration = 15;
                 break;

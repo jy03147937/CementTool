@@ -138,7 +138,7 @@ CGFloat const CPDBarInitialX2 = 0.98f;
     graph.plotAreaFrame.fill = [CPTFill fillWithColor:[Constant defineGraghBackgroundColor]];    //background color
     graph.paddingBottom = 195.0f;
     graph.paddingLeft  = 60.0f;
-    graph.paddingTop   = -10.0f;
+    graph.paddingTop   = 0.0f;
     graph.paddingRight  = -10.0f;  //图表到边界的距离.之所以把值设为负值，其原因是图的上边与右边有白线，十分不美观，为了隐藏他们
     // 3 - Set up styles
     CPTMutableTextStyle *titleStyle = [CPTMutableTextStyle textStyle];
